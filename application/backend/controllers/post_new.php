@@ -11,7 +11,11 @@ class Post_new extends CI_Controller {
 
 		$this->load->view('post_new');
 	}
-
+    
+	public function tinymce(){
+		$this->load->view('tinymce');
+		
+	}
 
 
 }
