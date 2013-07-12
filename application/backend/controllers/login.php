@@ -15,7 +15,7 @@ class Login extends CI_Controller {
 	
 	public function validate(){
 
-		redirect('home');
+		redirect('admin/home');
 	}
 	
 	

@@ -4,7 +4,7 @@
 		<h1>&nbsp; Login: </h1>
 		<br />
 	
-<form name="loginform" id="loginform" action="<?php  echo site_url('/login/validate'); ?>" method="post">
+<form name="loginform" id="loginform" action="<?php  echo site_url('/admin/login/validate'); ?>" method="post">
 	<p>
 		<label for="user_login">Username<br />
 		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
