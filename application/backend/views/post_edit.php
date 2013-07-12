@@ -39,7 +39,7 @@
              
              <div class="container">
 				<div class="mainbox nomargin">
-			<form action="<?php echo  base_url();  ?>admin/post/save" method="post">
+			<form action="<?php echo  base_url();  ?>admin/post/update" method="post">
 				<input type="hidden" name="formhash" value="d210453fca545649">
 				<table class="opt">
 					<tr>
@@ -56,10 +56,12 @@
 					</tr>
 					<tr>
 					<th colspan="2">
-					  <textarea class="wp-editor-area" style="height:378px;width:450px;" cols="40" name="post_content" id="content"><?php echo $post->title ?></textarea>
+					  <textarea class="wp-editor-area" style="height:378px;width:450px;" cols="40" name="post_content" id="content"><?php echo $post->content ?></textarea>
 					</th>
 					</tr>
-					
+					<tr>
+						<td><input type="hidden" class="txt" name="post_id" value="<?php echo $post->id ?>" /></td>
+					</tr>
 					
 				</table>
 				<div class="opt"><input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>

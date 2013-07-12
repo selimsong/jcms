@@ -20,4 +20,13 @@ class post_model  extends CI_Model{
 		return $query->row();
 	}
 	
+	function update(){
+
+		$title =  $_POST['post_title'];
+		$content = $_POST['post_content'];
+		$id = $_POST['post_id'];
+
+		$query = $this->db->query("update posts set title='$title', content='$content' where id ='$id'  LIMIT 1 ");
+	}
+	
 }

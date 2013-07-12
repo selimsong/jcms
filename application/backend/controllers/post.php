@@ -32,6 +32,14 @@ class Post extends CI_Controller {
 		$this->load->view('post_edit', $data);
 	}
 	
+	public function update(){
+
+		$this->load->database();
+		$this->load->model('post_model', 'post');
+		$this->post->update();
+		redirect('admin/post');
+	}
+	
 	public function save(){
 		
 		$this->load->database();
