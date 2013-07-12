@@ -17,6 +17,11 @@
 .footer{ position:absolute; z-index:10; right:13px; bottom:0; padding:5px 0; line-height:150%; background:url(http://localhost/jcms/images/bg_repx.gif) 0 -199px repeat-x; font-family:Arial, sans-serif; font-size:10px; -webkit-text-size-adjust: none; }
 </style>
 
+<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script>
+        tinymce.init({selector:'textarea'});
+</script>
+
 </head>
 <body scroll="no">
 <table cellpadding="0" cellspacing="0" width="100%" height="100%">
@@ -31,41 +36,39 @@
 		</td>
 		
 		<td valign="top">
-		   <div class="container">
-	
-		<h3>Posts</h3>
-		<div class="mainbox">
-			<form action="admin.php?m=user&a=ls&srchname=&srchregdate=" onsubmit="return confirm('该操作不可恢复，您确认要删除这些用户吗？');" method="post">
-				<input type="hidden" name="formhash" value="2926d50d4209e484">
-				<table class="datalist fixwidth" onmouseover="addMouseEvent(this);">
+             
+             <div class="container">
+				<div class="mainbox nomargin">
+			<form action="<?php echo  base_url();  ?>admin/post/save" method="post">
+				<input type="hidden" name="formhash" value="d210453fca545649">
+				<table class="opt">
 					<tr>
-						<th><input type="checkbox" name="chkall" id="chkall" onclick="checkall('delete[]')" class="checkbox" /> <label for="chkall"> delete</label></th>
-						<th>Title</th>
-						<th>Auth</th>
-						<th>Categories</th>
-						<th>Date</th>
-						<th>Edit</th>
+						<th colspan="2">Add New Post</th>
 					</tr>
-					<?php
-					   foreach ($post as $value){
-					?>
-					   <tr>
-							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="checkbox" /></td>
-							<td> <strong><?php echo $value->title;  ?></strong></td>
-							<td>admin</td>
-							<td>null</td>
-							<td><?php echo $value->date;  ?></td>
-							<td><a href="<?php  echo site_url('/admin/post/edit/' . $value->id); ?>">edit</a></td>
-						</tr>
-				  <?php }  ?>				
-					  <tr class="nobg">
-						<td><input type="submit" value="submit" class="btn" /></td>
-						<td class="tdpage" colspan="6"></td>
+					<tr>
+						<td><input type="text" class="txt" name="post_title" value="" /></td>
+						<td>input your title</td>
 					</tr>
+
+
+					<tr>
+						<th colspan="1"></th>
+					</tr>
+					<tr>
+					<th colspan="2">
+						<textarea class="wp-editor-area" style="height:378px;width:450px;" cols="40" name="post_content" id="content"></textarea>
+					</th>
+					 
+					</tr>
+					
+					
 				</table>
-				</form>
-					</div>
-	</div>     
+				<div class="opt"><input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>
+			</form>
+		</div>
+	</div>
+             
+             
 		</td>
 	</tr>
 </table>

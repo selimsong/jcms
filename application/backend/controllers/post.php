@@ -22,6 +22,14 @@ class Post extends CI_Controller {
 		$this->load->view('post_add', $data);
 	}
 	
+	public function edit($id){
+		echo $id;
+
+		$data['curNav'] = 'add_post';
+		$this->load->view('header');
+		$this->load->view('post_edit', $data);
+	}
+	
 	public function save(){
 		
 		$this->load->database();

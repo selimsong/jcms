@@ -14,7 +14,7 @@
 	</li>
 	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
 	<li id="menu-posts" class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first">
-		<a class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" href="edit.php">
+		<a class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" href="<?php  echo site_url('/admin/post'); ?>">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Posts</div>
