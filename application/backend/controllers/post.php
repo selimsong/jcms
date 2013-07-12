@@ -7,9 +7,12 @@ class Post extends CI_Controller {
 	}
 
 	public function index()
-	{
+	{ 
+		$this->load->database();
+		$this->load->model('post_model', 'post');
+		$data['post'] = $this->post->getPosts();
 		$this->load->view('header');
-		$this->load->view('post');
+		$this->load->view('post', $data);
 	}
 	
 	public function add(){

@@ -46,15 +46,18 @@
 						<th>Date</th>
 						<th>Edit</th>
 					</tr>
+					<?php
+					   foreach ($post as $value){
+					?>
 					   <tr>
-							<td class="option"><input type="checkbox" name="delete[]" value="1" class="checkbox" /></td>
-							<td> <strong>admin</strong></td>
-							<td>admin@your.com</td>
-							<td>13-7-12 14:46</td>
-							<td>127.0.0.1</td>
+							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="checkbox" /></td>
+							<td> <strong><?php echo $value->title;  ?></strong></td>
+							<td>admin</td>
+							<td>null</td>
+							<td><?php echo $value->date;  ?></td>
 							<td><a href="admin.php?m=user&a=edit&uid=1">编辑</a></td>
 						</tr>
-								
+				  <?php }  ?>				
 					  <tr class="nobg">
 						<td><input type="submit" value="submit" class="btn" /></td>
 						<td class="tdpage" colspan="6"></td>
