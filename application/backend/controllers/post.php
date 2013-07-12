@@ -27,7 +27,7 @@ class Post extends CI_Controller {
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$this->post->save();
-		redirect('admin/home');
+		redirect('admin/post');
 	}
 	
     

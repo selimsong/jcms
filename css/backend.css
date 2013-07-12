@@ -30,7 +30,8 @@ input.txt:hover, input.txt:focus, textarea:hover, textarea:focus{ border-color:#
 text-align:left;
 height:69px;
 line-height:69px;
-background: linear-gradient(to top, #373737 0px, #464646 5px) repeat scroll 0 0 #464646;
+
+background: #464646;
 color: #CCCCCC;
 }
 	.logo{ float:left;  width:321px; height:46px;}
