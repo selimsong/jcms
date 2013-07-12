@@ -4,12 +4,11 @@ class Post extends CI_Controller {
 	public function  Post(){
 		parent::__construct();
 		$this->load->helper('url');
-		
 	}
 
 	public function index()
 	{
-
+		$this->load->view('header');
 		$this->load->view('post');
 	}
 	

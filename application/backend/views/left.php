@@ -1,26 +1,15 @@
 <div id="adminmenuwrap">
 <div id="adminmenushadow"></div>
 <ul role="navigation" id="adminmenu">
-	<li id="menu-dashboard" class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last">
-	<a class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last" href="home">
-	<div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div>
-	<div class="wp-menu-name">Dashboard</div>
-	</a>
-	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Dashboard</li>
-	<li class="wp-first-item current">
-	<a class="wp-first-item current" href="http://localhost/jcms/admin/home">Home</a></li>
-	</ul>
-	</li>
+
+
+	<li id="menu-dashboard" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last">
+	<a aria-haspopup="true" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" href="index.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Dashboard</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Dashboard</li><li class="wp-first-item"><a class="wp-first-item" href="index.php">Home</a></li><li><a href="update-core.php">Updates <span title="" class="update-plugins count-0"><span class="update-count">0</span></span></a></li></ul></li>
 	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
-	<li id="menu-posts" class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first">
-	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu open-if-no-js menu-top menu-icon-post menu-top-first" href="edit.php">
-	<div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div>
-	<div class="wp-menu-name">Posts</div></a>
-	<ul class="wp-submenu wp-submenu-wrap">
-	<li class="wp-submenu-head">Posts</li>
-	<li class="wp-first-item"><a class="wp-first-item" href="http://localhost/jcms/admin/post">All Posts</a></li>
-	<li><a href="http://localhost/jcms/admin/post/add">Add New</a></li>
-	<li><a href="edit-tags.php?taxonomy=category">Categories</a></li><li><a href="edit-tags.php?taxonomy=post_tag">Tags</a></li></ul></li>
+	<li id="menu-posts" class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first">
+	<a class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" href="edit.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Posts</div></a>
+	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Posts</li><li class="wp-first-item current"><a class="wp-first-item current" href="edit.php">All Posts</a></li><li><a href="post-new.php">Add New</a></li><li><a href="edit-tags.php?taxonomy=category">Categories</a></li><li><a href="edit-tags.php?taxonomy=post_tag">Tags</a></li></ul></li>
 	<li id="menu-media" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media">
 	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" href="upload.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Media</div></a>
 	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Media</li><li class="wp-first-item"><a class="wp-first-item" href="upload.php">Library</a></li><li><a href="media-new.php">Add New</a></li></ul></li>
