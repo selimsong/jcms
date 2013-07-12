@@ -10,7 +10,7 @@ class Post extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->view('post_new');
+		$this->load->view('post');
 	}
 	
 	public function add(){
@@ -23,6 +23,7 @@ class Post extends CI_Controller {
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$this->post->save();
+		redirect('admin/home');
 	}
 	
     

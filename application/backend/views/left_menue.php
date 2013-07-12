@@ -15,7 +15,7 @@
 	<div class='wp-menu-name'>Posts</div></a>
 	<ul class='wp-submenu wp-submenu-wrap'>
 	<li class='wp-submenu-head'>Posts</li>
-	<li class="wp-first-item"><a href='edit.php' class="wp-first-item">All Posts</a></li>
+	<li class="wp-first-item"><a href='<?php echo  base_url();  ?>admin/post' class="wp-first-item">All Posts</a></li>
 	<li><a href='<?php echo  base_url();  ?>admin/post/add'>Add New</a></li>
 	<li><a href='edit-tags.php?taxonomy=category'>Categories</a></li><li><a href='edit-tags.php?taxonomy=post_tag'>Tags</a></li></ul></li>
 	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
