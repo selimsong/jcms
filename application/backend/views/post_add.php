@@ -76,7 +76,7 @@ var ajaxurl = '/wordpress/wp-admin/admin-ajax.php',
 		
 <div class="wrap">
 <div id="icon-edit" class="icon32 icon32-posts-post"><br /></div><h2>Add New Post</h2>
-<form name="post" action="post.php" method="post" id="post">
+<form name="post" action="<?php echo  base_url();  ?>admin/post/save" method="post" id="post">
 <div id="poststuff">
 <div id="titlewrap">
 	<label class="" id="title-prompt-text" for="title">Title:</label>
