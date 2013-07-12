@@ -16,7 +16,7 @@
 	<ul class='wp-submenu wp-submenu-wrap'>
 	<li class='wp-submenu-head'>Posts</li>
 	<li class="wp-first-item"><a href='edit.php' class="wp-first-item">All Posts</a></li>
-	<li><a href='<?php echo  base_url();  ?>admin/post_new'>Add New</a></li>
+	<li><a href='<?php echo  base_url();  ?>admin/post/add'>Add New</a></li>
 	<li><a href='edit-tags.php?taxonomy=category'>Categories</a></li><li><a href='edit-tags.php?taxonomy=post_tag'>Tags</a></li></ul></li>
 	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
 	<a href='upload.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image'><br /></div><div class='wp-menu-name'>Media</div></a>
