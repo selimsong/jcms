@@ -8,6 +8,7 @@ class Post extends CI_Controller {
 
 	public function index()
 	{ 
+		$data['curNav'] = 'list_post';
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$data['post'] = $this->post->getPosts();
@@ -16,8 +17,9 @@ class Post extends CI_Controller {
 	}
 	
 	public function add(){
-		
-		$this->load->view('post_add');
+		$data['curNav'] = 'add_post';
+		$this->load->view('header');
+		$this->load->view('post_add', $data);
 	}
 	
 	public function save(){
