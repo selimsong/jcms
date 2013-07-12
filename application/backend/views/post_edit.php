@@ -46,7 +46,7 @@
 						<th colspan="2">Add New Post</th>
 					</tr>
 					<tr>
-						<td><input type="text" class="txt" name="post_title" value="" /></td>
+						<td><input type="text" class="txt" name="post_title" value="<?php echo $post->title ?>" /></td>
 						<td>input your title</td>
 					</tr>
 
@@ -56,9 +56,8 @@
 					</tr>
 					<tr>
 					<th colspan="2">
-						<textarea class="wp-editor-area" style="height:378px;width:450px;" cols="40" name="post_content" id="content"></textarea>
+					  <textarea class="wp-editor-area" style="height:378px;width:450px;" cols="40" name="post_content" id="content"><?php echo $post->title ?></textarea>
 					</th>
-					 
 					</tr>
 					
 					

@@ -11,9 +11,13 @@ class post_model  extends CI_Model{
 
 	function getPosts(){
 		
-		$query = $this->db->query('select * from posts');
+		$query = $this->db->query("select * from posts");
         return $query->result();
 	}
 	
+	function editPost($id){
+		$query = $this->db->query("select id, title, content from posts where id ='$id'  LIMIT 1 ");
+		return $query->row();
+	}
 	
 }
