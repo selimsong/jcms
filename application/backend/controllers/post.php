@@ -9,7 +9,7 @@ class Post_new extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->view('post_new');
+		$this->load->view('post_add');
 	}
     
 	public function tinymce(){
