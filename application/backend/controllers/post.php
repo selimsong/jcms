@@ -4,6 +4,7 @@ class Post extends CI_Controller {
 	public function  Post(){
 		parent::__construct();
 		$this->load->helper('url');
+		
 	}
 
 	public function index()
@@ -19,7 +20,9 @@ class Post extends CI_Controller {
 	
 	public function save(){
 		
-		print_r($_POST);
+		$this->load->database();
+		$this->load->model('post_model', 'post');
+		$this->post->save();
 	}
 	
     

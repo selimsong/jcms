@@ -89,7 +89,7 @@ var ajaxurl = '/wordpress/wp-admin/admin-ajax.php',
 <div id="wp-content-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='http://localhost/wordpress/wp-includes/css/editor.min.css?ver=3.5.2' type='text/css' media='all' />
 
 <div id="wp-content-editor-container" class="wp-editor-container">
-<textarea class="wp-editor-area" style="height: 378px" cols="40" name="content" id="content"></textarea>
+<textarea class="wp-editor-area" style="height: 378px" cols="40" name="post_content" id="content"></textarea>
 </div>
 </div>
 <input type="submit" name="publish" id="publish" class="button button-primary button-large" value="Publish" accesskey="p">
