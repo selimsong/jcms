@@ -1,9 +1,9 @@
 
 	<body class="login login-action-login wp-core-ui">
-	<div id="login">
+	<div >
 <form name="loginform" id="loginform" action="<?php  echo site_url('/admin/login/validate'); ?>" method="post">
      <p>
-		<label for="user_login">Login</label>
+		Login
 	</p>
 	<p>
 		<label for="user_login">Username

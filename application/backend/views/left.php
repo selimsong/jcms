@@ -2,13 +2,13 @@
 <div id="adminmenushadow"></div>
 <ul role="navigation" id="adminmenu">
 	<li id="menu-dashboard" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last">
-		  <a aria-haspopup="true" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" href="">
+		  <a aria-haspopup="true" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" href="<?php  echo site_url('/admin/home'); ?>">
 			  <div class="wp-menu-arrow"><div></div></div>
 			  <div class="wp-menu-image"><br></div><div class="wp-menu-name">Dashboard</div>
 		  </a>
 		 <ul class="wp-submenu wp-submenu-wrap">
 			 <li class="wp-submenu-head">Dashboard</li>
-			 <li class="wp-first-item"><a class="wp-first-item" href="index.php">Home</a></li>
+			 <li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/home'); ?>">Home</a></li>
 			 <li><a href="update-core.php">Updates <span title="" class="update-plugins count-0"><span class="update-count">0</span></span></a></li>
 		 </ul>
 	</li>
