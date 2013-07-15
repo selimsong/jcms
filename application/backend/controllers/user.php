@@ -14,6 +14,17 @@ class User extends CI_Controller {
 	}
 	
 	
+	public function save(){
+		
+		$this->load->database();
+		$this->load->model('user_model', 'user');
+		$this->user->save();
+		//redirect('admin/post');
+		
+	}
+	
+	
+	
 	
 	
 	

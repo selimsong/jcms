@@ -15,28 +15,25 @@
              
              <div class="container">
 				<div class="mainbox nomargin">
-			<form action="<?php echo  base_url();  ?>admin/post/save" method="post">
-				<input type="hidden" name="formhash" value="d210453fca545649">
+			<form action="<?php echo  base_url();  ?>admin/user/save" method="post">
 				<table class="opt">
 					<tr>
-						<th colspan="2">Add New Post</th>
+						<th colspan="1">Add New User</th>
 					</tr>
 					<tr>
-						<td><input type="text" class="txt" name="post_title" value="" /></td>
-						<td>input your title</td>
+						<td>Username:</td>
+						<td><input type="text" class="txt" name="user_name" value="" /></td>
 					</tr>
 
-
 					<tr>
-						<th colspan="1"></th>
+						<td>E-mail:</td>
+						<td><input type="text" class="txt" name="user_email" value="" /></td>
 					</tr>
-					<tr>
-					<th colspan="2">
-						<textarea class="wp-editor-area" style="height:378px;width:450px;" cols="40" name="post_content" id="content"></textarea>
-					</th>
-					 
+                    
+                    <tr>
+						<td>Password:</td>
+						<td><input type="text" class="txt" name="user_password" value="" /></td>
 					</tr>
-					
 					
 				</table>
 				<div class="opt"><input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>
