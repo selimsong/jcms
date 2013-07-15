@@ -10,8 +10,8 @@ class Post extends CI_Controller {
 
 	public function index()
 	{ 
-		$this->lang->load(MAIN_LANG, $this->config->item('chinese'));
-		 $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$data['post'] = $this->post->getPosts();
