@@ -100,8 +100,8 @@
 			<li class="wp-submenu-head">Users</li>
 			<li class="wp-first-item <?php if('user' == $curNav) echo 'current'; ?>"><a class="wp-first-item" href="<?php  echo site_url('/admin/user'); ?>">All Users</a></li>
 			<li class="<?php if('useradd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/user/add'); ?>">New User</a></li>
-			<li><a href="">Roles</a></li>
-			<li><a href="">New Role</a></li>
+			<li><a href="<?php  echo site_url('/admin/role'); ?>">Roles</a></li>
+			<li><a href="<?php  echo site_url('/admin/role/add'); ?>">New Role</a></li>
 		</ul>
 	</li>
 	<li id="menu-tools" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools">

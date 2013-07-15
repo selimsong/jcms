@@ -4,6 +4,8 @@ class Role extends CI_Controller {
 	public function  Role(){
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->library('session');
+		$this->lang->load(MAIN_LANG, $this->session->userdata('default_lang'));
 	}
 	
 	
@@ -15,6 +17,12 @@ class Role extends CI_Controller {
 		$data['user'] = $this->user->getUsers();
 		$this->load->view('header');
 		$this->load->view('role', $data);
+	}
+	
+	public function add(){
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		$this->load->view('header');
+		$this->load->view('role_add', $data);
 	}
 	
 	
