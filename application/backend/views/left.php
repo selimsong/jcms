@@ -91,7 +91,7 @@
 		</ul>
 	</li>
 	<li id="menu-users" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users">
-		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="users.php">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="<?php  echo site_url('/admin/user'); ?>">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Users</div>
@@ -99,8 +99,9 @@
 		<ul class="wp-submenu wp-submenu-wrap">
 			<li class="wp-submenu-head">Users</li>
 			<li class="wp-first-item <?php if('user' == $curNav) echo 'current'; ?>"><a class="wp-first-item" href="<?php  echo site_url('/admin/user'); ?>">All Users</a></li>
-			<li class="<?php if('useradd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/user/add'); ?>">Add New</a></li>
-			<li><a href="profile.php">Your Profile</a></li>
+			<li class="<?php if('useradd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/user/add'); ?>">New User</a></li>
+			<li><a href="">Roles</a></li>
+			<li><a href="">New Role</a></li>
 		</ul>
 	</li>
 	<li id="menu-tools" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools">

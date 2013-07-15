@@ -28,15 +28,14 @@ $(document).ready(function(){
 		<td valign="top">
 		   <div class="container">
 	
-		<h3><?php echo $this->lang->line('Users');  ?></h3>
+		<h3>Users</h3>
 		<div class="mainbox">
 			<form action="<?php echo  base_url();  ?>admin/user/delete"  method="post">
 				
 				<table class="datalist fixwidth">
 					<tr>
 						<th><input id="CheckAll" type="checkbox" /> <label> delete</label></th>
-						<th>user name</th>
-						<th>email</th>
+						<th>Role Name</th>
 						<th>Edit</th>
 					</tr>
 					<?php
@@ -45,7 +44,6 @@ $(document).ready(function(){
 					   <tr>
 							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="mycheck" /></td>
 							<td> <strong><?php echo $value->user_name;  ?></strong></td>
-							<td><?php echo $value->email;  ?></td>
 							<td><a href="<?php  echo site_url('/admin/user/edit/' . $value->id); ?>">edit</a></td>
 						</tr>
 				  <?php }  ?>				
