@@ -17,7 +17,7 @@
 		<a class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" href="<?php  echo site_url('/admin/post'); ?>">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
-			<div class="wp-menu-name">Posts</div>
+			<div class="wp-menu-name"><?php echo $this->lang->line('Posts');  ?></div>
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
 		<li class="wp-submenu-head">Posts</li>
@@ -94,7 +94,7 @@
 		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="<?php  echo site_url('/admin/user'); ?>">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
-			<div class="wp-menu-name">Users</div>
+			<div class="wp-menu-name"><?php echo $this->lang->line('Users');  ?></div>
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
 			<li class="wp-submenu-head">Users</li>
