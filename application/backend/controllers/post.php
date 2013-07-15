@@ -4,10 +4,13 @@ class Post extends CI_Controller {
 	public function  Post(){
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->library('session');
+		$this->lang->load(MAIN_LANG, $this->session->userdata('default_lang'));
 	}
 
 	public function index()
 	{ 
+		$this->lang->load(MAIN_LANG, $this->config->item('chinese'));
 		 $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
 		$this->load->model('post_model', 'post');

@@ -4,7 +4,7 @@ class User extends CI_Controller {
 	public function  User(){
 		parent::__construct();
 		$this->load->helper('url');
-		//$this->config->set_item('language', 'chinese');
+		$this->config->set_item('language', 'chinese');
 		$this->lang->load(MAIN_LANG, $this->config->item('language'));
 	}
 	

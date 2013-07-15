@@ -34,7 +34,7 @@ line-height:69px;
 background: #464646;
 color: #CCCCCC;
 }
-	.logo{ float:left;  width:321px; height:46px;}
+	.logo{ float:left;   height:46px;}
 	.uinfo{ float:right; display:inline; margin-right:40px; }
 		.uinfo a{ color:#666; }
 		.uinfo em{ margin-right:5px; font-weight:700; }
