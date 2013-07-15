@@ -25,6 +25,14 @@ class Role extends CI_Controller {
 		$this->load->view('role_add', $data);
 	}
 	
+	public function save(){
+		
+		$this->load->database();
+		$this->load->model('role_model', 'role');
+		$this->role->save();
+		redirect('admin/role');
+	}
+	
 	
 	
 }
