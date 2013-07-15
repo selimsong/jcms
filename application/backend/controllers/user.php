@@ -27,10 +27,10 @@ class User extends CI_Controller {
 	
 	public function edit($id){
 		
-		$data['curNav'] = 'add_post';
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
 		$this->load->model('user_model', 'user');
-		$data['user'] = $this->user->editPost($id);
+		$data['user'] = $this->user->editUser($id);
 		$this->load->view('header');
 		$this->load->view('user_edit', $data);
 	}
@@ -41,13 +41,17 @@ class User extends CI_Controller {
 		$this->load->model('user_model', 'user');
 		$this->user->save();
 		redirect('admin/user');
-		
+	}
+	
+	public function update(){
+
+		$this->load->database();
+		$this->load->model('user_model', 'user');
+		$this->user->update();
+		redirect('admin/user');
 	}
 	
 	
-	
-	
-	
-	
+
 	
 }

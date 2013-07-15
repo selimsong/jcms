@@ -19,7 +19,7 @@
              <div class="container">
 				<div class="mainbox nomargin">
 			<form action="<?php echo  base_url();  ?>admin/post/update" method="post">
-				<input type="hidden" name="formhash" value="d210453fca545649">
+				 
 				<table class="opt">
 					<tr>
 						<th colspan="2">Add New Post</th>
