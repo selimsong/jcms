@@ -6,20 +6,41 @@ class User extends CI_Controller {
 		$this->load->helper('url');
 	}
 	
+	public function index()
+	{
+		
+		
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		$this->load->database();
+		$this->load->model('user_model', 'user');
+		$data['user'] = $this->user->getUsers();
+		$this->load->view('header');
+		$this->load->view('user', $data);
+	}
 	
 	public function add(){
-		$data['curNav'] = 'add_post';
+	
+	    $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->view('header');
 		$this->load->view('user_add', $data);
 	}
 	
+	public function edit($id){
+		
+		$data['curNav'] = 'add_post';
+		$this->load->database();
+		$this->load->model('user_model', 'user');
+		$data['user'] = $this->user->editPost($id);
+		$this->load->view('header');
+		$this->load->view('user_edit', $data);
+	}
 	
 	public function save(){
 		
 		$this->load->database();
 		$this->load->model('user_model', 'user');
 		$this->user->save();
-		//redirect('admin/post');
+		redirect('admin/user');
 		
 	}
 	

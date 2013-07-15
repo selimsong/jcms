@@ -36,7 +36,7 @@
 		<ul class="wp-submenu wp-submenu-wrap">
 			<li class="wp-submenu-head">Media</li>
 			<li class="wp-first-item"><a class="wp-first-item" href="upload.php">Library</a></li>
-			<li><a href="media-new.php">Add New</a></li>
+			<li><a href="">Add New</a></li>
 		</ul>
 	</li>
 	<li id="menu-pages" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page">
@@ -98,8 +98,8 @@
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
 			<li class="wp-submenu-head">Users</li>
-			<li class="wp-first-item"><a class="wp-first-item" href="users.php">All Users</a></li>
-			<li><a href="user-new.php">Add New</a></li>
+			<li class="wp-first-item <?php if('user' == $curNav) echo 'current'; ?>"><a class="wp-first-item" href="<?php  echo site_url('/admin/user'); ?>">All Users</a></li>
+			<li class="<?php if('useradd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/user/add'); ?>">Add New</a></li>
 			<li><a href="profile.php">Your Profile</a></li>
 		</ul>
 	</li>

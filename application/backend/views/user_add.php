@@ -32,7 +32,7 @@
                     
                     <tr>
 						<td>Password:</td>
-						<td><input type="text" class="txt" name="user_password" value="" /></td>
+						<td><input type="password" class="txt" name="user_password" value="" /></td>
 					</tr>
 					
 				</table>

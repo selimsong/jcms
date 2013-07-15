@@ -4,14 +4,16 @@ class user_model  extends CI_Model{
 	
 
 	function save(){
-		print_r($_POST);
-		/**
-		$this->content = $_POST['post_content'];
-		$this->date    = date("y-m-d H:i:s" ,time());
-		$this->db->insert('posts', $this);
-		*/
+		$this->user_name = $_POST['user_name'];
+		$this->password  = md5($_POST['user_password']);
+		$this->email     = $_POST['user_email'];
+		$this->db->insert('users', $this);
 	}
 	
+	function getUsers(){
+		$query = $this->db->query("select * from users");
+		return $query->result();
+	}
 	
 	
 }
