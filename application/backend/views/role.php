@@ -28,7 +28,7 @@ $(document).ready(function(){
 		<td valign="top">
 		   <div class="container">
 	
-		<h3>Users</h3>
+		<h3>Roles</h3>
 		<div class="mainbox">
 			<form action="<?php echo  base_url();  ?>admin/user/delete"  method="post">
 				
@@ -39,11 +39,11 @@ $(document).ready(function(){
 						<th>Edit</th>
 					</tr>
 					<?php
-					   foreach ($user as $value){
+					   foreach ($role as $value){
 					?>
 					   <tr>
 							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="mycheck" /></td>
-							<td> <strong><?php echo $value->user_name;  ?></strong></td>
+							<td> <strong><?php echo $value->role_name;  ?></strong></td>
 							<td><a href="<?php  echo site_url('/admin/user/edit/' . $value->id); ?>">edit</a></td>
 						</tr>
 				  <?php }  ?>				

@@ -13,8 +13,8 @@ class Role extends CI_Controller {
 	{
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
-		$this->load->model('user_model', 'user');
-		$data['user'] = $this->user->getUsers();
+		$this->load->model('role_model', 'role');
+		$data['role'] = $this->role->getRoles();
 		$this->load->view('header');
 		$this->load->view('role', $data);
 	}
