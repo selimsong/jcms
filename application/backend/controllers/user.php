@@ -9,7 +9,6 @@ class User extends CI_Controller {
 	public function index()
 	{
 		
-		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
 		$this->load->model('user_model', 'user');
@@ -51,7 +50,13 @@ class User extends CI_Controller {
 		redirect('admin/user');
 	}
 	
+	public function delete(){
+		$this->load->database();
+		$this->load->model('user_model', 'user');
+		$this->user->delete();
+		redirect('admin/user');
 	
-
+	}
+	
 	
 }

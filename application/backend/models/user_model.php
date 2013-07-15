@@ -34,5 +34,10 @@ class user_model  extends CI_Model{
 		$query = $this->db->query($sql);
 	}
 	
+	function delete(){
+		$_in = implode(',', $_POST['delete']);
+		$query = $this->db->query("delete from users where id in (" . $_in . ")  ");
+	}
+	
 	
 }
