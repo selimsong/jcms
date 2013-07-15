@@ -44,7 +44,7 @@ $(document).ready(function(){
 					   <tr>
 							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="mycheck" /></td>
 							<td> <strong><?php echo $value->role_name;  ?></strong></td>
-							<td><a href="<?php  echo site_url('/admin/user/edit/' . $value->id); ?>">edit</a></td>
+							<td><a href="<?php  echo site_url('/admin/role/edit/' . $value->id); ?>">edit</a></td>
 						</tr>
 				  <?php }  ?>				
 					  <tr class="nobg">
