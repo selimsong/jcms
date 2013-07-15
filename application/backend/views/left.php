@@ -27,8 +27,8 @@
 		<li><a href="edit-tags.php?taxonomy=post_tag">Tags</a></li>
 		</ul>
 	</li>
-	<li id="menu-media" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media">
-		<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" href="upload.php">
+	<li id="menu-media" class="wp-has-submenu wp-has-current-submenu wp-menu-open  menu-top menu-icon-media">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu   menu-top menu-icon-media" href="upload.php">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Media</div>
@@ -78,11 +78,31 @@
 		</ul>
 	</li>
 	<li id="menu-plugins" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins">
-	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" href="plugins.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></div></a>
-	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></li><li class="wp-first-item"><a class="wp-first-item" href="plugins.php">Installed Plugins</a></li><li><a href="plugin-install.php">Add New</a></li><li><a href="plugin-editor.php">Editor</a></li></ul></li>
-	<li id="menu-users" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users">
-	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" href="users.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Users</div></a>
-	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Users</li><li class="wp-first-item"><a class="wp-first-item" href="users.php">All Users</a></li><li><a href="user-new.php">Add New</a></li><li><a href="profile.php">Your Profile</a></li></ul></li>
+		<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" href="plugins.php">
+			<div class="wp-menu-arrow"><div></div></div>
+			<div class="wp-menu-image"><br></div>
+			<div class="wp-menu-name">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></div>
+		</a>
+		<ul class="wp-submenu wp-submenu-wrap">
+			<li class="wp-submenu-head">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></li>
+			<li class="wp-first-item"><a class="wp-first-item" href="plugins.php">Installed Plugins</a></li>
+			<li><a href="plugin-install.php">Add New</a></li>
+			<li><a href="plugin-editor.php">Editor</a></li>
+		</ul>
+	</li>
+	<li id="menu-users" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="users.php">
+			<div class="wp-menu-arrow"><div></div></div>
+			<div class="wp-menu-image"><br></div>
+			<div class="wp-menu-name">Users</div>
+		</a>
+		<ul class="wp-submenu wp-submenu-wrap">
+			<li class="wp-submenu-head">Users</li>
+			<li class="wp-first-item"><a class="wp-first-item" href="users.php">All Users</a></li>
+			<li><a href="user-new.php">Add New</a></li>
+			<li><a href="profile.php">Your Profile</a></li>
+		</ul>
+	</li>
 	<li id="menu-tools" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools">
 	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" href="tools.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Tools</div></a>
 	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Tools</li><li class="wp-first-item"><a class="wp-first-item" href="tools.php">Available Tools</a></li><li><a href="import.php">Import</a></li><li><a href="export.php">Export</a></li></ul></li>
