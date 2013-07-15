@@ -8,7 +8,7 @@ class Post extends CI_Controller {
 
 	public function index()
 	{ 
-		$data['curNav'] = 'list_post';
+		 $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$data['post'] = $this->post->getPosts();
@@ -17,17 +17,17 @@ class Post extends CI_Controller {
 	}
 	
 	public function add(){
-		$data['curNav'] = 'add_post';
+		 $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->view('header');
 		$this->load->view('post_add', $data);
 	}
 	
 	public function edit($id){
 		
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$data['post'] = $this->post->editPost($id);
-		$data['curNav'] = 'add_post';
 		$this->load->view('header');
 		$this->load->view('post_edit', $data);
 	}
