@@ -20,6 +20,11 @@ class post_model  extends CI_Model{
 		return $query->row();
 	}
 	
+	function delete(){
+		$_in = implode(',', $_POST['delete']);
+		$query = $this->db->query("delete from posts where id in (" . $_in . ")  ");
+	}
+
 	function update(){
 
 		$title =  $_POST['post_title'];

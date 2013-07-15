@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo  base_url();  ?>css/styles.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo  base_url();  ?>css/wp-admin.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo  base_url();  ?>css/backend.css" media="screen" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <meta name='robots' content='noindex,nofollow' />
 <style type="text/css">
 .menu{ position:relative; z-index:20; margin:0px; padding:0px;
