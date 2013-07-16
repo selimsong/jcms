@@ -21,11 +21,13 @@
 					</tr>
 					<tr>
 						<td>Username:</td>
-						<td><input type="text" class="txt" name="user_name" value="<?php echo $category->category_name;  ?>" /></td>
+						<td><input type="text" class="txt" name="category_name" value="<?php echo $category->category_name;  ?>" /></td>
 					</tr>
 
 				</table>
-				<div class="opt"><input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>
+				<div class="opt">
+				<input type="hidden" class="txt" name="category_id" value="<?php echo $category->id ?>" />
+				<input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>
 			</form>
 		</div>
 	</div>

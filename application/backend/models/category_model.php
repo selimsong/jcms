@@ -19,4 +19,12 @@ class category_model  extends CI_Model{
 		return $query->row();
 	}
 	
+	function update(){
+	
+		$category_name =  $_POST['category_name'];
+		$id = $_POST['category_id'];
+	
+		$query = $this->db->query("update category  set category_name='$category_name'  where id ='$id'  LIMIT 1 ");
+	}
+	
 }

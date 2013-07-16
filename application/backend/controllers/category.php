@@ -35,6 +35,15 @@ class Category extends CI_Controller {
 		$this->load->view('category_edit', $data);
 	}
 	
+	public function update(){
+	
+		$this->load->database();
+		$this->load->model('category_model', 'category');
+		$this->category->update();
+		redirect('admin/category');
+	}
+	
+	
 	public function save(){
 		
 		$this->load->database();
