@@ -22,17 +22,17 @@
 					</tr>
 					<tr>
 						<td>Username:</td>
-						<td><input type="text" class="txt" name="user_name" value="" /></td>
+						<td><input type="text" class="txt" name="user_name" autocomplete="off"  value="" /></td>
 					</tr>
 
 					<tr>
 						<td>E-mail:</td>
-						<td><input type="text" class="txt" name="user_email" value="" /></td>
+						<td><input type="text" class="txt" name="user_email" autocomplete="off" value="" /></td>
 					</tr>
                     
                     <tr>
 						<td>Password:</td>
-						<td><input type="password" class="txt" name="user_password" value="" /></td>
+						<td><input type="password" class="txt" name="user_password" autocomplete="off" value="" /></td>
 					</tr>
 					
 				</table>
