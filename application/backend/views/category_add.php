@@ -15,93 +15,16 @@
              
              <div class="container">
 				<div class="mainbox nomargin">
-			<form action="<?php echo  base_url();  ?>admin/role/save" method="post">
+			<form action="<?php echo  base_url();  ?>admin/category/save" method="post">
 				<table class="opt">
 					<tr>
 						<th colspan="1">Category Add</th>
 					</tr>
 					<tr>
-						<td>Rolename:</td>
-						<td><input type="text" class="txt" name="user_name" value="" /></td>
+						<td>Category Name:</td>
+						<td><input type="text" class="txt" name="category_name" value="" /></td>
 					</tr>
 
-					<tr>
-						<td>Permission setting:</td>
-						<td></td>
-					</tr>
-
-                    <tr>
-						<td>Posts view:</td>
-						<td>
-						<input type="radio" name="set[post]" value="1" /> allow
-						<input type="radio" name="set[post]" value="0" checked /> disallow
-						 </td>
-					</tr>
-                    
-                    <tr>
-						<td>Post add:</td>
-						<td>
-						<input type="radio" name="set[postadd]" value="1" /> allow
-						<input type="radio" name="set[postadd]" value="0" checked /> disallow
-						 </td>
-					</tr>
-					
-					<tr>
-						<td>Post edit:</td>
-						<td>
-						<input type="radio" name="set[postedit]" value="1" /> allow
-						<input type="radio" name="set[postedit]" value="0" checked /> disallow
-						</td>
-					</tr>
-                    
-                    <tr>
-						<td>Post delete:</td>
-						<td>
-						<input type="radio" name="set[postdelete]" value="1" /> allow
-						<input type="radio" name="set[postdelete]" value="0" checked /> disallow
-						</td>
-					</tr>
-                    
-                    <tr>
-						<td>User view:</td>
-						<td>
-						<input type="radio" name="set[user]" value="1" /> allow
-						<input type="radio" name="set[user]" value="0" checked /> disallow
-						</td>
-					</tr>
-                    
-                    <tr>
-						<td>User add:</td>
-						<td>
-						<input type="radio" name="set[useradd]" value="1" /> allow
-						<input type="radio" name="set[useradd]" value="0" checked /> disallow
-						</td>
-					</tr>
-                    
-                    <tr>
-						<td>User edit:</td>
-						<td>
-						<input type="radio" name="set[useredit]" value="1" /> allow
-						<input type="radio" name="set[useredit]" value="0" checked /> disallow
-						</td>
-					</tr>
-					
-				    <tr>
-						<td>role:</td>
-						<td>
-						<input type="radio" name="set[role]" value="1" /> allow
-						<input type="radio" name="set[role]" value="0" checked /> disallow
-						</td>
-					</tr>
-                    
-                    <tr>
-						<td>role add:</td>
-						<td>
-						<input type="radio" name="set[roleadd]" value="1" /> allow
-						<input type="radio" name="set[roleadd]" value="0" checked /> disallow
-						</td>
-					</tr>
-                    
 					
 				</table>
 				<div class="opt"><input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>

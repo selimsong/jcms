@@ -11,8 +11,12 @@ class Category extends CI_Controller {
 	public function index()
 	{
 	
-		
-		$this->load->view('category');
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		$this->load->database();
+		$this->load->model('category_model', 'category');
+		$data['category'] = $this->category->getCategory();
+		$this->load->view('header');
+		$this->load->view('category', $data);
 	}
 	
 	public function add(){
@@ -21,7 +25,13 @@ class Category extends CI_Controller {
 		$this->load->view('category_add', $data);
 	}
 	
-	
+	public function save(){
+		
+		$this->load->database();
+		$this->load->model('category_model', 'category');
+		$this->category->save();
+		redirect('admin/category');
+	}
 	
 	
 	
