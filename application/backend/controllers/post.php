@@ -53,10 +53,32 @@ class Post extends CI_Controller {
 	
 	public function save(){
 		
+		$uploadfile =  '../upload/'.basename($_FILES['pictures']['name']);
+		if (move_uploaded_file($_FILES['pictures']['tmp_name'], $uploadfile)) {
+			echo "File is valid, and was successfully uploaded.\n";
+		} else {
+			echo "Possible file upload attack!\n";
+		}
+		
+		
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$this->post->save();
 		redirect('admin/post');
+	}
+	
+	public function upload(){
+		
+		$this->load->view('upload');
+	}
+	
+	public function uploadsave(){
+		$uploadfile =  '../upload/'.basename($_FILES['pictures']['name']);
+		if (move_uploaded_file($_FILES['pictures']['tmp_name'], $uploadfile)) {
+			echo "File is valid, and was successfully uploaded.\n";
+		} else {
+			echo "Possible file upload attack!\n";
+		}
 	}
 	
     

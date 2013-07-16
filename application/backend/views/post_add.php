@@ -18,7 +18,7 @@
              
              <div class="container">
 				<div class="mainbox nomargin">
-			<form action="<?php echo  base_url();  ?>admin/post/save" method="post">
+			<form action="<?php echo  base_url();  ?>admin/post/save" method="post"  enctype="multipart/form-data">
 				<input type="hidden" name="formhash" value="d210453fca545649">
 				<table class="opt">
 					<tr>
@@ -29,7 +29,14 @@
 						<td>input your title</td>
 					</tr>
 
-
+                    <tr>
+						<th colspan="2">image</th>
+					</tr>
+					<tr>
+						<td><iframe  src="<?php echo  base_url();  ?>admin/post/upload" height="80" width="450" frameborder="0"></iframe></td>
+					</tr>
+					
+					
 					<tr>
 						<th colspan="1"></th>
 					</tr>
@@ -39,6 +46,7 @@
 					</th>
 					 
 					</tr>
+					
 					
 					
 				</table>
