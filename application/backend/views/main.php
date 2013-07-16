@@ -1,16 +1,9 @@
 <div class="container">
 	<h3> 统计信息</h3>
 	<ul class="memlist fixwidth">
-		<li><em><a href="admin.php?m=app&a=ls">应用总数</a>:</em>1</li>
-		<li><em><a href="admin.php?m=user&a=ls">用户总数</a>:</em>2</li>
-		<li><em><a href="admin.php?m=pm&a=ls">短消息数</a>:</em>0</li>
-		<li><em>好友记录数:</em>0</li>
+		<li><em><a href="admin.php?m=user&a=ls">用户总数</a>:</em>12</li>
 	</ul>
 	
-	<h3>通知状态</h3>
-	<ul class="memlist fixwidth">
-		<li><em><a href="admin.php?m=note&a=ls">未发送的通知数</a>:</em>0</li>
-			</ul>
 	
 	<h3>系统信息</h3>
 	<ul class="memlist fixwidth">
