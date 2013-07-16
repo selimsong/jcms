@@ -2,18 +2,18 @@
 	<body class="login login-action-login wp-core-ui">
 	<div >
 <form name="loginform" id="loginform" action="<?php  echo site_url('/admin/login/validate'); ?>" method="post">
-     <p>
-		Login
-	</p>
-	 <p>
-		<?php echo $error; ?>
-	</p>
+
+		<h1>Login</h1>
+
+	 <p style="color: #E01056">
+	   <?php echo $error; ?>
+	 </p>
 	<p>
-		<label for="user_login">Username
+		<label for="user_login">Username: 
 		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
 	</p>
 	<p>
-		<label for="user_pass">Password
+		<label for="user_pass">Password: 
 		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></label>
 	</p>
 	

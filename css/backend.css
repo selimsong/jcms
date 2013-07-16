@@ -16,7 +16,7 @@ em, cite, th{ font-style:normal; font-weight:normal; }
 table{ border-collapse:collapse; }
 
 /* form */
-textarea, input{ padding:2px; border:1px solid; border-color:#666 #eee #eee #666; }
+textarea, input{ padding:2px; border:1px solid;  }
 input.txt:hover, input.txt:focus, textarea:hover, textarea:focus{ border-color:#09C; background:#F5F9FD; }
 .radio{ margin-top:-1px; border:none; vertical-align:middle; }
 .checkbox{ height:14px; border:none; vertical-align:middle; }
@@ -90,14 +90,26 @@ color: #CCCCCC;
 	.ip{ width:15%; }
 .fixwidth{ width: 100%; }
 	.fixwidthdec{ width:580px; }
-#loginform{ overflow:hidden; margin:90px auto; *padding-top:90px; width:590px; }
-.login{ float:left; margin-top:5px; text-align:right; font:bold 14px "����"; }
-	.login p{ margin:10px 5px; }
+
+.login{   
+margin:90px auto;
+padding-right:200px;
+}
+.login form .input, .login input[type="text"] {
+color: #555;
+font-size: 18px;
+
+}
+
+
+	.login p{ margin:15px 5px;  }
+	.login  h1{ font-size: 24px; color: #555;  }
+	.login #wp-submit{width:100px; height:30px;}
 	.loginbtn{ padding-left:53px; text-align:left; }
 	.login .txt{ width:160px; }
 	.checkcode{ margin-top:-3px; *margin-top:-6px; width:70px; height:21px; cursor:pointer; vertical-align:middle; }
-.loginbox{ padding-right:40px; width:290px; height:120px; line-height:150%; background:url(../images/bg_login.gif) no-repeat right 50%; }
-	.loginbox h1{ text-indent:-9999px; margin:10px 0 10px; height:25px; background:url(../images/bg_repno.gif) no-repeat 0 -750px; }
+.loginbox{ padding-right:40px; width:290px; height:120px; line-height:150%;  }
+	.loginbox h1{ text-indent:-9999px; margin:10px 0 10px; height:25px;  }
 .ajax{ width:360px; border:1px solid #89B3C2; }
 	.ajaxbg{ margin:2px; padding:15px; background:url(bg_repx_hc.gif) repeat-x; }
 	.alert{ padding-left:40px; background:url(bg_repno.gif) no-repeat 0 -500px; }
