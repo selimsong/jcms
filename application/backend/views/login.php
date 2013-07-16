@@ -5,6 +5,9 @@
      <p>
 		Login
 	</p>
+	 <p>
+		<?php echo $error; ?>
+	</p>
 	<p>
 		<label for="user_login">Username
 		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
@@ -21,19 +24,7 @@
 
 
 
-<script type="text/javascript">
-function wp_attempt_focus(){
-setTimeout( function(){ try{
-d = document.getElementById('user_login');
-d.focus();
-d.select();
-} catch(e){}
-}, 200);
-}
 
-wp_attempt_focus();
-if(typeof wpOnload=='function')wpOnload();
-</script>
 
 	<p id="backtoblog"><a href="http://localhost/jcms" title="Are you lost?">&larr; Back to homepage</a></p>
 	

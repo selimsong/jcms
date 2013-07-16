@@ -3,8 +3,6 @@ class Role extends CI_Controller {
 
 	public function  Role(){
 		parent::__construct();
-		$this->load->helper('url');
-		$this->load->library('session');
 		$this->lang->load(MAIN_LANG, $this->session->userdata('default_lang'));
 	}
 	
