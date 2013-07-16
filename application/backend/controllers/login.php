@@ -7,7 +7,12 @@ class Login extends CI_Controller {
 	
 	public function index()
 	{    
+		 $loginId = $this->session->userdata('UserName');
+		 if(!empty($loginId)){
+		 	redirect('admin/home');
+		 }
          $data['error'] = $this->session->userdata('error');
+         $this->session->unset_userdata('error');
 		 $this->load->view('header');
 		 $this->load->view('login', $data);
 	}
@@ -22,6 +27,7 @@ class Login extends CI_Controller {
 			$query = $this->db->query("select id, user_name, password from users where user_name ='$log'  LIMIT 1 ");
 			if($row = $query->row()){
 				if ($row->password == md5($pwd)) {
+					 $this->session->set_userdata(array('UserName' => $log));
 					 redirect('admin/home');
 				}else{
 					$error_msg = 'password not correct';
