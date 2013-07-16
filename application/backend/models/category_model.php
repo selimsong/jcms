@@ -13,4 +13,10 @@ class category_model  extends CI_Model{
 		return $query->result();
 	}
 	
+	function editCategory($id){
+		
+		$query = $this->db->query("select id, category_name from category where id ='$id'  LIMIT 1 ");
+		return $query->row();
+	}
+	
 }

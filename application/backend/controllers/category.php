@@ -25,6 +25,16 @@ class Category extends CI_Controller {
 		$this->load->view('category_add', $data);
 	}
 	
+	public function edit($id){
+	
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		$this->load->database();
+		$this->load->model('category_model', 'category');
+		$data['category'] = $this->category->editCategory($id);
+		$this->load->view('header');
+		$this->load->view('category_edit', $data);
+	}
+	
 	public function save(){
 		
 		$this->load->database();
