@@ -21,9 +21,9 @@
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
 		<li class="wp-submenu-head">Posts</li>
-		<li class="wp-first-item <?php if('post' == $curNav) echo 'current'; ?>"><a class="wp-first-item current" href="<?php  echo site_url('/admin/post'); ?>">All Posts</a></li>
-		<li class="<?php if('postadd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/post/add'); ?>"  >Add New</a></li>
-		<li><a href="edit-tags.php?taxonomy=category">Categories</a></li>
+		<li class="wp-first-item <?php if('post' == $curNav) echo 'current'; ?>"><a class="wp-first-item current" href="<?php  echo site_url('/admin/post'); ?>"><?php echo $this->lang->line('AllPosts');  ?></a></li>
+		<li class="<?php if('postadd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/post/add'); ?>"  ><?php echo $this->lang->line('AddPosts');  ?></a></li>
+		<li><a href="edit-tags.php?taxonomy=category"><?php echo $this->lang->line('Categories');  ?></a></li>
 		<li><a href="edit-tags.php?taxonomy=post_tag">Tags</a></li>
 		</ul>
 	</li>
