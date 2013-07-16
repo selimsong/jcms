@@ -30,10 +30,17 @@
 					</tr>
 
                     <tr>
-						<th colspan="2">image</th>
+						<th colspan="2">Categories</th>
 					</tr>
 					<tr>
-						<td><iframe  src="<?php echo  base_url();  ?>admin/post/upload" height="80" width="450" frameborder="0"></iframe></td>
+						<td>
+						<select name="category">
+							  <option value="volvo">Volvo</option>
+							  <option value="saab">Saab</option>
+							  <option value="mercedes">Mercedes</option>
+							  <option value="audi">Audi</option>
+						</select>
+						</td>
 					</tr>
 					
 					
@@ -45,6 +52,15 @@
 						<textarea class="wp-editor-area" style="height:378px;width:450px;" cols="40" name="post_content" id="content"></textarea>
 					</th>
 					 
+					</tr>
+					
+					
+					
+					<tr>
+						<th colspan="2">image</th>
+					</tr>
+					<tr>
+						<td><iframe  src="<?php echo  base_url();  ?>admin/post/upload" height="80" width="450" frameborder="0"></iframe></td>
 					</tr>
 					
 					
