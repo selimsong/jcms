@@ -44,6 +44,13 @@ class Category extends CI_Controller {
 	}
 	
 	
+	public function delete(){
+		$this->load->database();
+		$this->load->model('category_model', 'category');
+		$this->category->delete();
+		redirect('admin/category');
+	}
+	
 	public function save(){
 		
 		$this->load->database();

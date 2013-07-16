@@ -19,6 +19,11 @@ class category_model  extends CI_Model{
 		return $query->row();
 	}
 	
+	function delete(){
+		$_in = implode(',', $_POST['delete']);
+		$query = $this->db->query("delete from category where id in (" . $_in . ")  ");
+	}
+	
 	function update(){
 	
 		$category_name =  $_POST['category_name'];

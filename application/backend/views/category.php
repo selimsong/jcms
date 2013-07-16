@@ -30,7 +30,7 @@ $(document).ready(function(){
 	
 		<h3>Posts</h3>
 		<div class="mainbox">
-			<form action="<?php echo  base_url();  ?>admin/post/delete"  method="post">
+			<form action="<?php echo  base_url();  ?>admin/category/delete"  method="post">
 				
 				<table class="datalist fixwidth">
 					<tr>
