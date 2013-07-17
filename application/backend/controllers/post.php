@@ -3,19 +3,25 @@ class Post extends MY_Controller {
 
 	public function  Post(){
 		parent::__construct();
+		$this->load->library('pagination');
 		$this->lang->load(MAIN_LANG, $this->session->userdata('default_lang'));
 	}
 
 	public function index()
 	{ 
-		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->database();
 		$this->load->model('post_model', 'post');
+		$config['base_url'] = base_url().'admin/post/index';
+		$config['per_page'] = PER_PAGE;
+		$config['total_rows'] = $this->post->getPostsCount() + 100;
 		$data['post'] = $this->post->getPosts();
+		$this->pagination->initialize($config);
+		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		$this->load->view('header');
 		$this->load->view('post', $data);
 	}
+	
 	
 	public function add(){
 		 $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);

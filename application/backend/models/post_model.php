@@ -15,6 +15,10 @@ class post_model  extends CI_Model{
         return $query->result();
 	}
 	
+	function getPostsCount(){
+		return $this->db->count_all("posts");
+	}
+	
 	function editPost($id){
 		$query = $this->db->query("select id, title, content from posts where id ='$id'  LIMIT 1 ");
 		return $query->row();

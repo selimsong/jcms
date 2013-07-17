@@ -52,8 +52,19 @@ $(document).ready(function(){
 							<td><?php echo $value->date;  ?></td>
 							<td><a href="<?php  echo site_url('/admin/post/edit/' . $value->id); ?>">edit</a></td>
 						</tr>
-				  <?php }  ?>				
-					  <tr class="nobg">
+				  <?php }  ?>
+				 
+				 
+				 	<tr class="nobg">
+						<td>&nbsp;</td>
+						<td class="tdpage" colspan="6"></td>
+					</tr>	
+					
+				  	<tr class="nobg">
+						<td></td>
+						<td class="tdpage" colspan="1"><?php echo $this->pagination->create_links(); ?></td>
+					</tr>				  	
+					<tr class="nobg">
 						<td><input type="submit" value="submit" class="btn" /></td>
 						<td class="tdpage" colspan="6"></td>
 					</tr>
