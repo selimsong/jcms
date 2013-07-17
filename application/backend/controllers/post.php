@@ -10,7 +10,7 @@ class Post extends MY_Controller {
 	public function index()
 	{ 
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
-		$this->load->database();
+		
 		$this->load->model('post_model', 'post');
 		$config['base_url'] = base_url().'admin/post/index';
 		$config['per_page'] = PER_PAGE;
@@ -25,7 +25,12 @@ class Post extends MY_Controller {
 	
 	
 	public function add(){
-		 $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+	
+		$this->load->model('post_model', 'post');
+		$data['category']  = $this->post->getCategory();
+		
+		
 		$this->load->view('header');
 		$this->load->view('post_add', $data);
 	}
@@ -34,7 +39,7 @@ class Post extends MY_Controller {
 		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$data['page'] = $page;
-		$this->load->database();
+		
 		$this->load->model('post_model', 'post');
 		$data['post'] = $this->post->editPost($id);
 		$this->load->view('header');
@@ -52,7 +57,6 @@ class Post extends MY_Controller {
 	public function update(){
 		
         $page = $_POST['current_page'];
-		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$this->post->update();
 		redirect('admin/post/index/'.$page);
@@ -88,6 +92,7 @@ class Post extends MY_Controller {
 		}
 	}
 	
+
     
 	public function tinymce(){
 		$this->load->view('tinymce');

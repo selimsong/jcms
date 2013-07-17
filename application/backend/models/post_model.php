@@ -19,6 +19,11 @@ class post_model  extends CI_Model{
 		return $this->db->count_all("posts");
 	}
 	
+	function getCategory(){
+		$query = $this->db->query("select * from category");
+		return $query->result();
+	}
+	
 	function editPost($id){
 		$query = $this->db->query("select id, title, content from posts where id ='$id'  LIMIT 1 ");
 		return $query->row();

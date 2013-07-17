@@ -35,10 +35,9 @@
 					<tr>
 						<td>
 						<select name="category">
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="mercedes">Mercedes</option>
-							  <option value="audi">Audi</option>
+						     <?php  foreach ($category as $value): ?>
+						        <option value="<?php echo $value->id  ?>"><?php echo $value->category_name  ?></option>
+						     <?php endforeach;  ?>
 						</select>
 						</td>
 					</tr>
