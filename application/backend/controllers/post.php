@@ -15,9 +15,9 @@ class Post extends MY_Controller {
 		$config['base_url'] = base_url().'admin/post/index';
 		$config['per_page'] = PER_PAGE;
 		$config['total_rows'] = $this->post->getPostsCount();
-		$data['post'] = $this->post->getPosts();
 		$this->pagination->initialize($config);
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data['post'] = $this->post->getPosts($config['per_page'], $page);
 		$this->load->view('header');
 		$this->load->view('post', $data);
 	}

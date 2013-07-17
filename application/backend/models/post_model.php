@@ -9,9 +9,9 @@ class post_model  extends CI_Model{
 		$this->db->insert('posts', $this);
 	}
 
-	function getPosts(){
+	function getPosts($limit, $start){
 		
-		$query = $this->db->query("select * from posts");
+		$query = $this->db->query("select * from posts limit $start, $limit ");
         return $query->result();
 	}
 	
