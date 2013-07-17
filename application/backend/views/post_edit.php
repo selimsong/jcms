@@ -39,7 +39,9 @@
 					</th>
 					</tr>
 					<tr>
-						<td><input type="hidden" class="txt" name="post_id" value="<?php echo $post->id ?>" /></td>
+						<td>
+						<input type="hidden" class="txt" name="current_page" value="<?php echo $page ?>" />
+						<input type="hidden" class="txt" name="post_id" value="<?php echo $post->id ?>" /></td>
 					</tr>
 					
 				</table>

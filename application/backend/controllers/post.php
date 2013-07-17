@@ -16,8 +16,9 @@ class Post extends MY_Controller {
 		$config['per_page'] = PER_PAGE;
 		$config['total_rows'] = $this->post->getPostsCount();
 		$this->pagination->initialize($config);
-		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-		$data['post'] = $this->post->getPosts($config['per_page'], $page);
+		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data['post'] = $this->post->getPosts($config['per_page'], $data['page']);
+		
 		$this->load->view('header');
 		$this->load->view('post', $data);
 	}
@@ -29,9 +30,10 @@ class Post extends MY_Controller {
 		$this->load->view('post_add', $data);
 	}
 	
-	public function edit($id){
+	public function edit($id, $page){
 		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		$data['page'] = $page;
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$data['post'] = $this->post->editPost($id);
@@ -48,11 +50,12 @@ class Post extends MY_Controller {
 	}
 	
 	public function update(){
-
+		
+        $page = $_POST['current_page'];
 		$this->load->database();
 		$this->load->model('post_model', 'post');
 		$this->post->update();
-		redirect('admin/post');
+		redirect('admin/post/index/'.$page);
 	}
 	
 	public function save(){

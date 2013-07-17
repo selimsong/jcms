@@ -50,7 +50,7 @@ $(document).ready(function(){
 							<td>admin</td>
 							<td>null</td>
 							<td><?php echo $value->date;  ?></td>
-							<td><a href="<?php  echo site_url('/admin/post/edit/' . $value->id); ?>">edit</a></td>
+							<td><a href="<?php  echo site_url('/admin/post/edit/' . $value->id .'/'. $page); ?>">edit</a></td>
 						</tr>
 				  <?php }  ?>
 				 
