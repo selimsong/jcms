@@ -24,7 +24,7 @@ function getAllowWithDis($t, $permission){
 		<td valign="top">
              <div class="container">
 				<div class="mainbox nomargin">
-			<form action="<?php echo  base_url();  ?>admin/role/save" method="post">
+			<form action="<?php echo  base_url();  ?>admin/role/update" method="post">
 				<table class="opt">
 					<tr>
 						<th colspan="1">Role Edit</th>
@@ -140,7 +140,9 @@ function getAllowWithDis($t, $permission){
                     
 					
 				</table>
-				<div class="opt"><input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>
+				<div class="opt">
+				<input type="hidden" class="txt" name="role_id" value="<?php echo $role['id']; ?>" />
+				<input type="submit" name="submit" value=" 提 交 " class="btn" tabindex="3" /></div>
 			</form>
 		</div>
 	</div>

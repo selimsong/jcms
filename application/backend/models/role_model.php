@@ -40,5 +40,22 @@ class role_model  extends CI_Model{
 		$this->db->insert('roles', $this);
 	}
 	
+	function update(){
+	
+		$modle_permission = $this->config->item('model_permission');
+		$permission = array();
+		foreach ($_POST['set'] as $key => $value){
+			if(1 == $value){
+				$permission[] = array_search($key, $modle_permission);
+			}
+		}
+		
+		$role_name          = $_POST['user_name'];
+		$role_permission    = implode(',', $permission);
+		$id                 = $_POST['role_id'];
+
+		$query = $this->db->query("update roles set role_name='$role_name', role_permission='$role_permission' where id ='$id'  LIMIT 1 ");
+	}
+	
 	
 }

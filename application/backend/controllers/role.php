@@ -28,19 +28,23 @@ class Role extends MY_Controller {
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->model('role_model', 'role');
 		$data['role'] = $this->role->editRole($id);
-		print_r($data);
 		$this->load->view('header');
 		$this->load->view('role_edit', $data);
 	}
 	
 	public function save(){
 		
-		$this->load->database();
 		$this->load->model('role_model', 'role');
 		$this->role->save();
 		redirect('admin/role');
 	}
 	
+	public function update(){
+		
+		$this->load->model('role_model', 'role');
+		$this->role->update();
+		redirect('admin/role');
+	}
 	
 	
 }
