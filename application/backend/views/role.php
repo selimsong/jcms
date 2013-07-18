@@ -16,7 +16,7 @@ $(document).ready(function(){
 <body scroll="no">
 <table cellpadding="0" cellspacing="0" width="100%" height="100%">
 	<tr>
-		<td colspan="2" height="69">
+		<td colspan="2" height="60">
 		     <?php  $this->load->view('top');  ?>
 		</td>
 	</tr>

@@ -74,10 +74,11 @@ input.txt:hover, input.txt:focus, textarea:hover, textarea:focus{
 
 .mainhd{ 
 text-align:left;
-height:69px;
-line-height:69px;
+height:60px;
+line-height:60px;
 background: #464646;
 color: #CCCCCC;
+margin-bottom:2px;
 }
 .logo{ 
 	float:left;   
