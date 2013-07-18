@@ -417,7 +417,7 @@ h3 .btn{
 	list-style:none; 
 	margin:7px 0 25px; 
 	padding-top:2px; 
-	border-top:2px solid #B5CFD9; 
+	border-top:1px solid #333333; 
 }
 .memlist li{ 
 	clear:both; 
