@@ -30,7 +30,6 @@ class Post extends MY_Controller {
 		$this->load->model('post_model', 'post');
 		$data['category']  = $this->post->getCategory();
 		
-		
 		$this->load->view('header');
 		$this->load->view('post_add', $data);
 	}
@@ -71,7 +70,6 @@ class Post extends MY_Controller {
 		} else {
 			echo "Possible file upload attack!\n";
 		}
-		
 		
 		$this->load->database();
 		$this->load->model('post_model', 'post');
