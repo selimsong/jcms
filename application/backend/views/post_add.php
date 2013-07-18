@@ -35,8 +35,8 @@
 					<tr>
 						<td>
 						<select name="category">
-						     <?php  foreach ($category as $value): ?>
-						        <option value="<?php echo $value->id  ?>"><?php echo $value->category_name  ?></option>
+						     <?php  foreach ($category as $key => $value): ?>
+						        <option value="<?php echo $key  ?>"><?php echo $value;  ?></option>
 						     <?php endforeach;  ?>
 						</select>
 						</td>

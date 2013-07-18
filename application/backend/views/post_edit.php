@@ -28,7 +28,20 @@
 						<td><input type="text" class="txt" name="post_title" value="<?php echo $post->title ?>" /></td>
 						<td>input your title</td>
 					</tr>
-
+                    
+                   <tr>
+						<th colspan="2">Categories</th>
+					</tr>
+					<tr>
+						<td>
+						<select name="category">
+						     <?php  foreach ($category as $key=>$value): ?>
+						        <option value="<?php echo $key;  ?>" <?php  if($key == $post->cate_id){ echo "selected"; }   ?>    ><?php echo $value;  ?></option>
+						     <?php endforeach;  ?>
+						</select>
+						</td>
+					</tr>
+                    
 
 					<tr>
 						<th colspan="1"></th>

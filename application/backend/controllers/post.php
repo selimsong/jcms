@@ -18,7 +18,7 @@ class Post extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		$data['post'] = $this->post->getPosts($config['per_page'], $data['page']);
-		
+		$data['category']  = $this->post->getCategory();
 		$this->load->view('header');
 		$this->load->view('post', $data);
 	}
@@ -41,6 +41,7 @@ class Post extends MY_Controller {
 		$data['page'] = $page;
 		
 		$this->load->model('post_model', 'post');
+		$data['category']  = $this->post->getCategory();
 		$data['post'] = $this->post->editPost($id);
 		$this->load->view('header');
 		$this->load->view('post_edit', $data);

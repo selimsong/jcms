@@ -22,11 +22,16 @@ class post_model  extends CI_Model{
 	
 	function getCategory(){
 		$query = $this->db->query("select * from category");
-		return $query->result();
+		$cate = $query->result_array();
+		$cateArray = array();
+		foreach ($cate as $value){
+			$cateArray[$value['id']] = $value['category_name'];
+		}
+		return $cateArray;
 	}
 	
 	function editPost($id){
-		$query = $this->db->query("select id, title, content from posts where id ='$id'  LIMIT 1 ");
+		$query = $this->db->query("select id, title, cate_id, content from posts where id ='$id'  LIMIT 1 ");
 		return $query->row();
 	}
 	
@@ -40,8 +45,8 @@ class post_model  extends CI_Model{
 		$title =  $_POST['post_title'];
 		$content = $_POST['post_content'];
 		$id = $_POST['post_id'];
-
-		$query = $this->db->query("update posts set title='$title', content='$content' where id ='$id'  LIMIT 1 ");
+        $cate_id = $_POST['category'];
+		$query = $this->db->query("update posts set title='$title', cate_id='$cate_id', content='$content' where id ='$id'  LIMIT 1 ");
 	}
 	
 }

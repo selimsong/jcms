@@ -48,7 +48,7 @@ $(document).ready(function(){
 							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="mycheck" /></td>
 							<td> <strong><?php echo $value->title;  ?></strong></td>
 							<td>admin</td>
-							<td>null</td>
+							<td><?php if(isset($category[$value->cate_id])) echo $category[$value->cate_id]; ?></td>
 							<td><?php echo $value->date;  ?></td>
 							<td><a href="<?php  echo site_url('/admin/post/edit/' . $value->id .'/'. $page); ?>">edit</a></td>
 						</tr>
