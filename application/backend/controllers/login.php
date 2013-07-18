@@ -27,7 +27,7 @@ class Login extends CI_Controller {
 			$query = $this->db->query("select id, user_name, password from users where user_name ='$log'  LIMIT 1 ");
 			if($row = $query->row()){
 				if ($row->password == md5($pwd)) {
-					 $this->session->set_userdata(array('UserName' => $log));
+					 $this->session->set_userdata(array('UserName' => $log, 'userId' => $row->id));
 					 redirect('admin/home');
 				}else{
 					$error_msg = 'password not correct';

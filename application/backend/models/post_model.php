@@ -3,10 +3,11 @@ class post_model  extends CI_Model{
 	
 	
 	function save(){
-		$this->title   = $_POST['post_title'];
-		$this->content = $_POST['post_content'];
-		$this->cate_id = $_POST['category'];
-		$this->date    = date("y-m-d H:i:s" ,time()); 
+		$this->title     = $_POST['post_title'];
+		$this->content   = $_POST['post_content'];
+		$this->cate_id   = $_POST['category'];
+		$this->date      = date("y-m-d H:i:s" ,time()); 
+		$this->user_name = $this->session->userdata('UserName');
 		$this->db->insert('posts', $this);
 	}
 
@@ -46,7 +47,8 @@ class post_model  extends CI_Model{
 		$content = $_POST['post_content'];
 		$id = $_POST['post_id'];
         $cate_id = $_POST['category'];
-		$query = $this->db->query("update posts set title='$title', cate_id='$cate_id', content='$content' where id ='$id'  LIMIT 1 ");
+        $user_name = $this->session->userdata('UserName');
+		$query = $this->db->query("update posts set title='$title', cate_id='$cate_id', user_name='$user_name', content='$content' where id ='$id'  LIMIT 1 ");
 	}
 	
 }
