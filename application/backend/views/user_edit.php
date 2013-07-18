@@ -25,6 +25,17 @@
 						<td><input type="text" class="txt" name="user_name" value="<?php echo $user->user_name;  ?>" /></td>
 					</tr>
 
+				   <tr>
+						<td>Role:</td>
+						<td>
+							<select name="role">
+							     <?php  foreach ($role as $key => $value): ?>
+							        <option value="<?php echo $key  ?>"  <?php if($user->roleid == $key) echo "selected"; ?> ><?php echo $value;  ?></option>
+							     <?php endforeach;  ?>
+							</select>
+						</td>
+					</tr>
+					
 					<tr>
 						<td>E-mail:</td>
 						<td><input type="text" class="txt" name="user_email" value="<?php echo $user->email;  ?>" /></td>

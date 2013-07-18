@@ -10,7 +10,6 @@ class User extends MY_Controller {
 	{
 		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
-		$this->load->database();
 		$this->load->model('user_model', 'user');
 		$data['user'] = $this->user->getUsers();
 		$this->load->view('header');
@@ -20,6 +19,8 @@ class User extends MY_Controller {
 	public function add(){
 	
 	    $data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+	    $this->load->model('user_model', 'user');
+	    $data['role'] = $this->user->getRole();
 		$this->load->view('header');
 		$this->load->view('user_add', $data);
 	}
@@ -27,8 +28,8 @@ class User extends MY_Controller {
 	public function edit($id){
 		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
-		$this->load->database();
 		$this->load->model('user_model', 'user');
+		$data['role'] = $this->user->getRole();
 		$data['user'] = $this->user->editUser($id);
 		$this->load->view('header');
 		$this->load->view('user_edit', $data);
@@ -36,7 +37,6 @@ class User extends MY_Controller {
 	
 	public function save(){
 		
-		$this->load->database();
 		$this->load->model('user_model', 'user');
 		$this->user->save();
 		redirect('admin/user');
@@ -44,14 +44,13 @@ class User extends MY_Controller {
 	
 	public function update(){
 
-		$this->load->database();
 		$this->load->model('user_model', 'user');
 		$this->user->update();
 		redirect('admin/user');
 	}
 	
 	public function delete(){
-		$this->load->database();
+
 		$this->load->model('user_model', 'user');
 		$this->user->delete();
 		redirect('admin/user');
