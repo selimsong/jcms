@@ -12,7 +12,7 @@ class post_model  extends CI_Model{
 
 	function getPosts($limit, $start){
 		
-		$query = $this->db->query("select * from posts limit $start, $limit ");
+		$query = $this->db->query("select * from posts  order by date desc  limit $start, $limit  ");
         return $query->result();
 	}
 	
