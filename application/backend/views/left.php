@@ -27,6 +27,20 @@
 		<li><a href="<?php  echo site_url('/admin/category/add'); ?>"><?php echo $this->lang->line('AddCategory');  ?></a></li>
 		</ul>
 	</li>
+	<li id="menu-users" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="<?php  echo site_url('/admin/user'); ?>">
+			<div class="wp-menu-arrow"><div></div></div>
+			<div class="wp-menu-image"><br></div>
+			<div class="wp-menu-name"><?php echo $this->lang->line('Users');  ?></div>
+		</a>
+		<ul class="wp-submenu wp-submenu-wrap">
+			<li class="wp-submenu-head">Users</li>
+			<li class="wp-first-item <?php if('user' == $curNav) echo 'current'; ?>"><a class="wp-first-item" href="<?php  echo site_url('/admin/user'); ?>">All Users</a></li>
+			<li class="<?php if('useradd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/user/add'); ?>">New User</a></li>
+			<li><a href="<?php  echo site_url('/admin/role'); ?>">Roles</a></li>
+			<li><a href="<?php  echo site_url('/admin/role/add'); ?>">New Role</a></li>
+		</ul>
+	</li>
 	<li id="menu-media" class="wp-has-submenu wp-has-current-submenu wp-menu-open  menu-top menu-icon-media">
 		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu   menu-top menu-icon-media" href="upload.php">
 			<div class="wp-menu-arrow"><div></div></div>
@@ -90,20 +104,7 @@
 			<li><a href="plugin-editor.php">Editor</a></li>
 		</ul>
 	</li>
-	<li id="menu-users" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users">
-		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="<?php  echo site_url('/admin/user'); ?>">
-			<div class="wp-menu-arrow"><div></div></div>
-			<div class="wp-menu-image"><br></div>
-			<div class="wp-menu-name"><?php echo $this->lang->line('Users');  ?></div>
-		</a>
-		<ul class="wp-submenu wp-submenu-wrap">
-			<li class="wp-submenu-head">Users</li>
-			<li class="wp-first-item <?php if('user' == $curNav) echo 'current'; ?>"><a class="wp-first-item" href="<?php  echo site_url('/admin/user'); ?>">All Users</a></li>
-			<li class="<?php if('useradd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/user/add'); ?>">New User</a></li>
-			<li><a href="<?php  echo site_url('/admin/role'); ?>">Roles</a></li>
-			<li><a href="<?php  echo site_url('/admin/role/add'); ?>">New Role</a></li>
-		</ul>
-	</li>
+
 	<li id="menu-tools" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools">
 	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" href="tools.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Tools</div></a>
 	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Tools</li><li class="wp-first-item"><a class="wp-first-item" href="tools.php">Available Tools</a></li><li><a href="import.php">Import</a></li><li><a href="export.php">Export</a></li></ul></li>
