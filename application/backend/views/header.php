@@ -3,7 +3,6 @@
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>backend - jcms &rsaquo; Log In</title>
-<link rel="stylesheet" type="text/css" href="<?php echo  base_url();  ?>css/styles.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo  base_url();  ?>css/wp-admin.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo  base_url();  ?>css/backend.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo  base_url();  ?>css/colors-fresh.css" media="screen" />
