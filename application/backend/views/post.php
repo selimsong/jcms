@@ -46,7 +46,7 @@ $(document).ready(function(){
 					?>
 					   <tr>
 							<td class="option"><input type="checkbox" name="delete[]" value="<?php echo $value->id; ?>" class="mycheck" /></td>
-							<td> <strong><?php echo $value->title;  ?></strong></td>
+							<td> <?php echo $value->title;  ?></td>
 							<td><?php echo $value->user_name ?></td>
 							<td><?php if(isset($category[$value->cate_id])) echo $category[$value->cate_id]; ?></td>
 							<td><?php echo $value->date;  ?></td>

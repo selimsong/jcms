@@ -229,11 +229,10 @@ color: #CCCCCC;
 	border-top:1px solid #333333; 
 }
 .datalist th{ 
-	line-height:250%; 
+	line-height:250%;
 	text-align:left; 
-	background:url(../images/bg_repx.gif) repeat-x 0 bottom; 
-	color:#9EBECB; 
 	font-size:12px; 
+	font-weight: bold;
 }
 .datalist td{ 
 	padding:5px 0; 
