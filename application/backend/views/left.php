@@ -16,13 +16,13 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 		 </ul>
 	</li>
 	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
-	<li id="menu-posts" class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first">
-		<a class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" href="#">
+	<li id="menu-posts" class="wp-has-submenu wp-has-current-submenu wp-menu-open  menu-top menu-icon-post menu-top-first">
+		<a class="wp-has-submenu wp-has-current-submenu wp-menu-open  menu-top menu-icon-post menu-top-first" href="#">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name"><?php echo $this->lang->line('Posts');  ?></div>
 		</a>
-		<ul class="wp-submenu wp-submenu-wrap">
+		<ul class="wp-submenu ">
 		<li class="wp-submenu-head">Posts</li>
 		<?php if(in_array('post', $userPer)): ?>
 		<li class="wp-first-item <?php if('post' == $curNav) echo 'current'; ?>"><a class="wp-first-item current" href="<?php  echo site_url('/admin/post'); ?>"><?php echo $this->lang->line('AllPosts');  ?></a></li>

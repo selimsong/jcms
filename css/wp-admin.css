@@ -79,7 +79,7 @@ list-style-image:none;
 .js #adminmenu .opensub .wp-submenu,
 #adminmenu a.menu-top:focus + .wp-submenu,
 .no-js li.wp-has-submenu:hover .wp-submenu {
-	top: -1px;
+	/**top: -1px; */
 }
 
 #adminmenu .wp-has-current-submenu .wp-submenu,
