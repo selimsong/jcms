@@ -21,7 +21,7 @@
 					</tr>
 					<tr>
 						<td>Site Title:</td>
-						<td><input type="text" class="txt" name="site_title" autocomplete="off"  value="" /></td>
+						<td><input type="text" class="txt" name="site_title" autocomplete="off"  value="<?php echo $setting->site_title; ?>" /></td>
 					</tr>
 
 
