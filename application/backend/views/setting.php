@@ -14,7 +14,7 @@
              
              <div class="container">
 				<div class="mainbox nomargin">
-			<form action="<?php echo  base_url();  ?>admin/user/save" method="post">
+			<form action="<?php echo  base_url();  ?>admin/setting/save" method="post">
 				<table class="opt">
 					<tr>
 						<th colspan="1">General Settings</th>
