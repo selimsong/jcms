@@ -13,10 +13,9 @@ class Setting extends MY_Controller {
 	}
 	
     public function save(){
-    	
-    	$this->load->model('post_model', 'post');
-    	$this->post->save();
-    	redirect('admin/post');
+    	$this->load->model('setting_model', 'setting');
+    	$this->setting->save();
+    	redirect('admin/setting');
     }
 	
 }

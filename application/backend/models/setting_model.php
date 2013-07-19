@@ -2,14 +2,18 @@
 class setting_model  extends CI_Model{
 		
 	function save(){
-		$this->title     = $_POST['post_title'];
-		$this->content   = $_POST['post_content'];
-		$this->cate_id   = $_POST['category'];
-		$this->date      = date("y-m-d H:i:s" ,time());
-		$this->user_name = $this->session->userdata('UserName');
-		$this->db->insert('posts', $this);
+		$query = $this->db->query("select id from setting limit 0, 1");
+		$site_title = $_POST['site_title'];
+		if ($query->num_rows() > 0){
+			$row = $query->row();
+			$id = $row->id;
+			$query = $this->db->query("update setting set title='$title' where id ='$id'  LIMIT 1 ");
+		}else{
+			$this->site_title   = $site_title;
+			$this->db->insert('setting', $this);
+		}
+		
 	}
 	
-	
-	
+
 }
