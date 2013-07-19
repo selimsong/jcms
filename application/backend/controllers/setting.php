@@ -10,7 +10,6 @@ class Setting extends MY_Controller {
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->model('setting_model', 'setting');
 		$data['setting'] = $this->setting->index();
-		print_r($data);
 		$this->load->view('header');
 		$this->load->view('setting', $data);
 	}
