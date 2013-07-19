@@ -1,7 +1,6 @@
 <?php
 class post_model  extends CI_Model{
 	
-	
 	function save(){
 		$this->title     = $_POST['post_title'];
 		$this->content   = $_POST['post_content'];
@@ -50,5 +49,4 @@ class post_model  extends CI_Model{
         $user_name = $this->session->userdata('UserName');
 		$query = $this->db->query("update posts set title='$title', cate_id='$cate_id', user_name='$user_name', content='$content' where id ='$id'  LIMIT 1 ");
 	}
-	
 }
