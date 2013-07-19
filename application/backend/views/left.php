@@ -56,7 +56,7 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
 			<li class="wp-submenu-head">Settings</li>
-			<li class="wp-first-item"><a class="wp-first-item" href="options-general.php">General</a></li>
+			<li class="wp-first-item"><a class="wp-first-item" href="<?php  echo site_url('/admin/setting'); ?>">General</a></li>
 			<li><a href="options-writing.php">Writing</a></li>
 			<li><a href="options-reading.php">Reading</a></li>
 			<li><a href="options-discussion.php">Discussion</a></li>
