@@ -146,37 +146,21 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 </ul>
 </div>
 <script type="text/javascript">
-$("li.menu-top").hover(
-function(){
-	/** comment the close menue function
-    $("li.menu-top").each(function(){
-    	 if($(this).hasClass('wp-has-current-submenu')){
-    		 $(this).removeClass('wp-has-current-submenu');
-    		 $(this).removeClass('wp-menu-open');
-    		 $(this).addClass('wp-not-current-submenu');
-         }
-     });
-    */
-    if($(this).hasClass('wp-not-current-submenu')){
-    	$(this).removeClass('wp-not-current-submenu');
-    	$(this).addClass('wp-has-current-submenu wp-menu-open');
-    	$(this).find('a.wp-not-current-submenu').addClass('wp-has-current-submenu');
-    	$(this).find('a.wp-not-current-submenu').removeClass('wp-not-current-submenu');
-		
-    }
-},
-function(){
-}
-);
-
-$("li.menu-top").click(function(){
+$("a.menu-top").click(function(){
 	if($(this).hasClass('wp-has-current-submenu')){
 		$(this).removeClass('wp-has-current-submenu');
-		$(this).removeClass('wp-menu-open');
 		$(this).addClass('wp-not-current-submenu');
-		$(this).find('a.wp-has-current-submenu').addClass('wp-not-current-submenu');
-		$(this).find('a.wp-has-current-submenu').removeClass('wp-has-current-submenu');	
-    }
+		$(this).parent().addClass('wp-not-current-submenu');
+		$(this).parent().removeClass('wp-has-current-submenu');	
+		$(this).parent().removeClass('wp-menu-open');
+    }else{
+    	$(this).addClass('wp-has-current-submenu');
+    	$(this).removeClass('wp-not-current-submenu');
+    	
+    	$(this).parent().addClass('wp-has-current-submenu');
+    	$(this).parent().addClass('wp-menu-open');
+    	$(this).parent().removeClass('wp-not-current-submenu');
+     }
     return false;
 });
 
