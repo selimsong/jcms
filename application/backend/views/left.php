@@ -48,6 +48,22 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 			<li><a href="<?php  echo site_url('/admin/role/add'); ?>">New Role</a></li>
 		</ul>
 	</li>
+	<li id="menu-settings" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-settings menu-top-last">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-settings menu-top-last" href="#">
+			<div class="wp-menu-arrow"><div></div></div>
+			<div class="wp-menu-image"><br></div>
+			<div class="wp-menu-name">Settings</div>
+		</a>
+		<ul class="wp-submenu wp-submenu-wrap">
+			<li class="wp-submenu-head">Settings</li>
+			<li class="wp-first-item"><a class="wp-first-item" href="options-general.php">General</a></li>
+			<li><a href="options-writing.php">Writing</a></li>
+			<li><a href="options-reading.php">Reading</a></li>
+			<li><a href="options-discussion.php">Discussion</a></li>
+			<li><a href="options-media.php">Media</a></li>
+			<li><a href="options-permalink.php">Permalinks</a></li>
+		</ul>
+	</li>
 	<li id="menu-tools" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-tools">
 		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-tools" href="#">
 			<div class="wp-menu-arrow"><div></div></div>
@@ -121,22 +137,6 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 			<li class="wp-first-item"><a class="wp-first-item" href="plugins.php">Installed Plugins</a></li>
 			<li><a href="plugin-install.php">Add New</a></li>
 			<li><a href="plugin-editor.php">Editor</a></li>
-		</ul>
-	</li>
-	<li id="menu-settings" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last">
-		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-settings menu-top-last" href="options-general.php">
-			<div class="wp-menu-arrow"><div></div></div>
-			<div class="wp-menu-image"><br></div>
-			<div class="wp-menu-name">Settings</div>
-		</a>
-		<ul class="wp-submenu wp-submenu-wrap">
-			<li class="wp-submenu-head">Settings</li>
-			<li class="wp-first-item"><a class="wp-first-item" href="options-general.php">General</a></li>
-			<li><a href="options-writing.php">Writing</a></li>
-			<li><a href="options-reading.php">Reading</a></li>
-			<li><a href="options-discussion.php">Discussion</a></li>
-			<li><a href="options-media.php">Media</a></li>
-			<li><a href="options-permalink.php">Permalinks</a></li>
 		</ul>
 	</li>
 	<li class="hide-if-no-js" id="collapse-menu">
