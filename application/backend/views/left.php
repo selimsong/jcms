@@ -1,3 +1,6 @@
+<?php 
+$userPer = json_decode($this->session->userdata('userPermission'));
+?>
 <div id="adminmenuwrap">
 <div id="adminmenushadow"></div>
 <ul role="navigation" id="adminmenu">
@@ -21,8 +24,12 @@
 		</a>
 		<ul class="wp-submenu wp-submenu-wrap">
 		<li class="wp-submenu-head">Posts</li>
+		<?php if(in_array('post', $userPer)): ?>
 		<li class="wp-first-item <?php if('post' == $curNav) echo 'current'; ?>"><a class="wp-first-item current" href="<?php  echo site_url('/admin/post'); ?>"><?php echo $this->lang->line('AllPosts');  ?></a></li>
+		<?php  endif; ?>
+		<?php if(in_array('postadd', $userPer)): ?>
 		<li class="<?php if('postadd' == $curNav) echo 'current'; ?>"><a href="<?php  echo site_url('/admin/post/add'); ?>"  ><?php echo $this->lang->line('AddPosts');  ?></a></li>
+		<?php  endif; ?>
 		<li><a href="<?php  echo site_url('/admin/category'); ?>"><?php echo $this->lang->line('Categories');  ?></a></li>
 		<li><a href="<?php  echo site_url('/admin/category/add'); ?>"><?php echo $this->lang->line('AddCategory');  ?></a></li>
 		</ul>

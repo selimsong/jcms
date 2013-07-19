@@ -13,7 +13,6 @@ class Login extends CI_Controller {
 		 }
          $data['error'] = $this->session->userdata('error');
          $this->session->unset_userdata('error');
-		// $this->load->view('header');
 		 $this->load->view('login', $data);
 	}
 	
@@ -24,10 +23,18 @@ class Login extends CI_Controller {
 		$log  = addslashes(trim($_POST['log']));
 		$pwd  = addslashes(trim($_POST['pwd']));
 		if(!empty($log)){
-			$query = $this->db->query("select id, user_name, password from users where user_name ='$log'  LIMIT 1 ");
+			$query = $this->db->query("select id, user_name, roleid, password from users where user_name ='$log'  LIMIT 1 ");
 			if($row = $query->row()){
 				if ($row->password == md5($pwd)) {
-					 $this->session->set_userdata(array('UserName' => $log, 'userId' => $row->id));
+					 $queryRole = $this->db->query("select role_name, role_permission from roles where id ='{$row->roleid}'  LIMIT 1 ");
+					 $rowRole = $queryRole->row();
+					 $userPermission = explode(',', $rowRole->role_permission);
+					 $_userPermission = array();
+					 $permissionConstant = $this->config->item('model_permission');
+					 foreach ($userPermission as $value){
+					 	$_userPermission[] = $permissionConstant[$value];
+					 }
+					 $this->session->set_userdata(array('UserName' => $log, 'userId' => $row->id, 'userPermission' => json_encode($_userPermission)));
 					 redirect('admin/home');
 				}else{
 					$error_msg = 'password not correct';

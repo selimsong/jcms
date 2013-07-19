@@ -8,7 +8,6 @@ class User extends MY_Controller {
 	
 	public function index()
 	{
-		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
 		$this->load->model('user_model', 'user');
 		$data['user'] = $this->user->getUsers();
