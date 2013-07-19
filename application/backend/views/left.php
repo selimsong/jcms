@@ -127,10 +127,9 @@ function(){
     if($(this).hasClass('wp-not-current-submenu')){
     	$(this).removeClass('wp-not-current-submenu');
     	$(this).addClass('wp-has-current-submenu wp-menu-open');
-    }	
+    }
 },
 function(){
-	
 }
 );
 
