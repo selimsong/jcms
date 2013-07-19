@@ -48,8 +48,8 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 			<li><a href="<?php  echo site_url('/admin/role/add'); ?>">New Role</a></li>
 		</ul>
 	</li>
-	<li id="menu-tools" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools">
-		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-tools" href="tools.php">
+	<li id="menu-tools" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-tools">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-tools" href="#">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Tools</div>
@@ -61,7 +61,7 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 		</ul>
 	</li>
 	<li id="menu-media" class="wp-has-submenu wp-has-current-submenu wp-menu-open  menu-top menu-icon-media">
-		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu   menu-top menu-icon-media" href="upload.php">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu   menu-top menu-icon-media" href="#">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Media</div>
@@ -160,11 +160,25 @@ function(){
     if($(this).hasClass('wp-not-current-submenu')){
     	$(this).removeClass('wp-not-current-submenu');
     	$(this).addClass('wp-has-current-submenu wp-menu-open');
+    	$(this).find('a.wp-not-current-submenu').addClass('wp-has-current-submenu');
+    	$(this).find('a.wp-not-current-submenu').removeClass('wp-not-current-submenu');
+		
     }
 },
 function(){
 }
 );
+
+$("li.menu-top").click(function(){
+	if($(this).hasClass('wp-has-current-submenu')){
+		$(this).removeClass('wp-has-current-submenu');
+		$(this).removeClass('wp-menu-open');
+		$(this).addClass('wp-not-current-submenu');
+		$(this).find('a.wp-has-current-submenu').addClass('wp-not-current-submenu');
+		$(this).find('a.wp-has-current-submenu').removeClass('wp-has-current-submenu');	
+    }
+    return false;
+});
 
 
 </script>
