@@ -54,7 +54,7 @@
 		</ul>
 	</li>
 	<li id="menu-pages" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page">
-		<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" href="edit.php?post_type=page">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-page" href="edit.php?post_type=page">
 			<div class="wp-menu-arrow"><div></div>
 			</div><div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Pages</div>
@@ -66,7 +66,7 @@
 		</ul>
 	</li>
 	<li id="menu-comments" class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last">
-		<a class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" href="edit-comments.php">
+		<a class="wp-has-current-submenu menu-top menu-icon-comments menu-top-last" href="edit-comments.php">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Comments <span class="awaiting-mod count-0">
@@ -76,7 +76,7 @@
 	</li>
 	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
 	<li id="menu-appearance" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first">
-		<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" href="themes.php">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-appearance menu-top-first" href="themes.php">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Appearance</div>
@@ -92,7 +92,7 @@
 		</ul>
 	</li>
 	<li id="menu-plugins" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins">
-		<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" href="plugins.php">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-plugins" href="plugins.php">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name">Plugins <span class="update-plugins count-0"><span class="plugin-count">0</span></span></div>
@@ -106,9 +106,32 @@
 	</li>
 
 	<li id="menu-tools" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools">
-	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" href="tools.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Tools</div></a>
+	<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-tools" href="tools.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Tools</div></a>
 	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Tools</li><li class="wp-first-item"><a class="wp-first-item" href="tools.php">Available Tools</a></li><li><a href="import.php">Import</a></li><li><a href="export.php">Export</a></li></ul></li>
 	<li id="menu-settings" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last">
-	<a aria-haspopup="true" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" href="options-general.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Settings</div></a>
+	<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-settings menu-top-last" href="options-general.php"><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-image"><br></div><div class="wp-menu-name">Settings</div></a>
 	<ul class="wp-submenu wp-submenu-wrap"><li class="wp-submenu-head">Settings</li><li class="wp-first-item"><a class="wp-first-item" href="options-general.php">General</a></li><li><a href="options-writing.php">Writing</a></li><li><a href="options-reading.php">Reading</a></li><li><a href="options-discussion.php">Discussion</a></li><li><a href="options-media.php">Media</a></li><li><a href="options-permalink.php">Permalinks</a></li></ul></li><li class="hide-if-no-js" id="collapse-menu"><div id="collapse-button"><div></div></div><span>Collapse menu</span></li></ul>
 </div>
+<script type="text/javascript">
+$("li.menu-top").hover(
+function(){
+	/** comment the close menue function
+    $("li.menu-top").each(function(){
+    	 if($(this).hasClass('wp-has-current-submenu')){
+    		 $(this).removeClass('wp-has-current-submenu');
+    		 $(this).removeClass('wp-menu-open');
+    		 $(this).addClass('wp-not-current-submenu');
+         }
+     });
+    */
+    if($(this).hasClass('wp-not-current-submenu')){
+    	$(this).removeClass('wp-not-current-submenu');
+    	$(this).addClass('wp-has-current-submenu wp-menu-open');
+    }	
+},
+function(){
+	
+}
+);
+
+</script>
