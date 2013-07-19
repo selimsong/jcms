@@ -13,7 +13,7 @@ class Login extends CI_Controller {
 		 }
          $data['error'] = $this->session->userdata('error');
          $this->session->unset_userdata('error');
-		 $this->load->view('header');
+		// $this->load->view('header');
 		 $this->load->view('login', $data);
 	}
 	
