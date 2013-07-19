@@ -1,24 +1,71 @@
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `category`
+--
+
+CREATE TABLE IF NOT EXISTS `category` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `category_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ci_sessions`
+--
+
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(45) NOT NULL DEFAULT '0',
+  `user_agent` varchar(120) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` text NOT NULL,
+  PRIMARY KEY (`session_id`),
+  KEY `last_activity_idx` (`last_activity`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `posts`
+--
+
 CREATE TABLE IF NOT EXISTS `posts` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
   `content` longtext NOT NULL,
+  `cate_id` bigint(20) NOT NULL,
+  `user_name` varchar(60) NOT NULL,
   `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
+-- --------------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(60) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
+--
+-- 表的结构 `roles`
+--
 
 CREATE TABLE IF NOT EXISTS `roles` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `role_name` varchar(60) NOT NULL,
   `role_permission` text NOT NULL,
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(60) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `roleid` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
