@@ -17,6 +17,10 @@
 	border-color: #cfcfcf;
 }
 
+#adminmenu a:hover { 
+	text-decoration:none; 
+}
+
 #adminmenu div.separator {
 	border-color: #e1e1e1;
 }

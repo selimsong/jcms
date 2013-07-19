@@ -17,7 +17,7 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 	</li>
 	<li class="wp-not-current-submenu wp-menu-separator"><div class="separator"></div></li>
 	<li id="menu-posts" class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first">
-		<a class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" href="<?php  echo site_url('/admin/post'); ?>">
+		<a class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" href="#">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name"><?php echo $this->lang->line('Posts');  ?></div>
@@ -35,7 +35,7 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 		</ul>
 	</li>
 	<li id="menu-users" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users">
-		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="<?php  echo site_url('/admin/user'); ?>">
+		<a aria-haspopup="true" class="wp-has-submenu wp-has-current-submenu menu-top menu-icon-users" href="#">
 			<div class="wp-menu-arrow"><div></div></div>
 			<div class="wp-menu-image"><br></div>
 			<div class="wp-menu-name"><?php echo $this->lang->line('Users');  ?></div>
@@ -165,5 +165,6 @@ function(){
 function(){
 }
 );
+
 
 </script>
