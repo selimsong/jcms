@@ -1,7 +1,7 @@
 <div id="adminmenuwrap">
 <div id="adminmenushadow"></div>
 <ul role="navigation" id="adminmenu">
-	<li id="menu-dashboard" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last">
+	<li id="menu-dashboard" class="wp-first-item wp-has-submenu wp-not-current-submenu  menu-top-first menu-icon-dashboard menu-top-last">
 		  <a aria-haspopup="true" class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" href="<?php  echo site_url('/admin/home'); ?>">
 			  <div class="wp-menu-arrow"><div></div></div>
 			  <div class="wp-menu-image"><br></div><div class="wp-menu-name">Dashboard</div>
