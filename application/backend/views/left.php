@@ -32,6 +32,7 @@ $userPer = json_decode($this->session->userdata('userPermission'));
 		<?php  endif; ?>
 		<li><a href="<?php  echo site_url('/admin/category'); ?>"><?php echo $this->lang->line('Categories');  ?></a></li>
 		<li><a href="<?php  echo site_url('/admin/category/add'); ?>"><?php echo $this->lang->line('AddCategory');  ?></a></li>
+		<li><a href="<?php  echo site_url('/admin/post/add2'); ?>">Add POST2</a></li>
 		</ul>
 	</li>
 	<li id="menu-users" class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-users">

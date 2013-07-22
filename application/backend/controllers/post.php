@@ -31,6 +31,14 @@ class Post extends MY_Controller {
 		$this->load->view('post_add', $data);
 	}
 	
+	public function add2(){
+		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
+		$this->load->model('post_model', 'post');
+		$data['category']  = $this->post->getCategory();
+		$this->load->view('header');
+		$this->load->view('post_add2', $data);
+	}
+	
 	public function edit($id, $page){
 		
 		$data['curNav'] = $this->uri->segment(1).$this->uri->segment(2);
@@ -88,6 +96,11 @@ class Post extends MY_Controller {
 	public function tinymce(){
 		$this->load->view('tinymce');
 		
+	}
+	
+	public function niceedit(){
+		
+		$this->load->view('niceEdit');
 	}
 
 
