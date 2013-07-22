@@ -17,7 +17,8 @@ By calling the nicEditors.allTextareas() function the below example replaces all
 </script>
 <script type="text/javascript" src="<?php echo  base_url();  ?>js/nicEdit.js"></script>
 <script type="text/javascript">
-	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	bkLib.onDomLoaded(function() { new niceEditor({
+		         }).panelInstance(); });
 </script>
 
 <h4>First Textarea</h4>

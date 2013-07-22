@@ -3,7 +3,14 @@
 </script>
 <script type="text/javascript" src="<?php echo  base_url();  ?>js/nicEdit.js"></script>
 <script type="text/javascript">
-	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	//bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+	bkLib.onDomLoaded(function() { 
+			new nicEditor({
+				iconsPath: base_url +'images/nicEditorIcons.gif',
+				uploadURI : base_url + 'upload/nicUpload.php', 
+			}).panelInstance('content');
+
+		});
 </script>
 <body scroll="no">
 <table cellpadding="0" cellspacing="0" width="100%" height="100%">
