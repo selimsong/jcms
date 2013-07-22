@@ -1,7 +1,7 @@
 <body scroll="no">
 <table cellpadding="0" cellspacing="0" width="100%" height="100%">
 	<tr>
-		<td colspan="2" height="60">
+		<td colspan="2">
 		     <?php  $this->load->view('top');  ?>
 		</td>
 	</tr>
