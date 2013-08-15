@@ -1,0 +1,12 @@
+name = zone_oem
+description = oem zone on homepage
+core = 7.x
+package = Features
+php = 5.2.4
+version = 7.x-1.0-20130611
+project = zone_oem
+dependencies[] = nodequeue
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features_exclude[dependencies][ctools] = ctools

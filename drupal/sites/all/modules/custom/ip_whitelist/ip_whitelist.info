@@ -1,0 +1,10 @@
+name = IP Whitelist
+description = Allows access to be granted by IP.
+package = Qualcomm
+core = 7.x
+
+dependencies[] = 'digi_util'
+
+files[] = crud/IPPatternUI.inc
+files[] = crud/IPPattern.inc
+files[] = crud/IPPatternListUI.inc

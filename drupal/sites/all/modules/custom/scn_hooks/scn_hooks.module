@@ -1,0 +1,13 @@
+<?php
+
+
+/**
+ * Implements hook_init().
+ */
+function scn_hooks_init() {
+  global $user;
+
+  if ($user->uid == '0' && !empty($_GET['q']) && $_GET['q'] != variable_get('site_frontpage', 'front') && arg(0) != 'user') {
+    drupal_goto('<front>');
+  }
+}

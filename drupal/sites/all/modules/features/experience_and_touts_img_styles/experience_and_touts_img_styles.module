@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the experience and touts img styles feature.
+ */
+
+include_once 'experience_and_touts_img_styles.features.inc';

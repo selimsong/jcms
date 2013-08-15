@@ -1,0 +1,2511 @@
+/* line 17, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, sass/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 11, sass/main.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* line 16, sass/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 21, sass/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 26, sass/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 35, sass/main.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 39, sass/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 45, sass/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+/* line 53, sass/main.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 88, sass/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 96, sass/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/* line 103, sass/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 108, sass/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 120, sass/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 129, sass/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 146, sass/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 151, sass/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 160, sass/main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print {
+  /* line 177, sass/main.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 185, sass/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 189, sass/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 193, sass/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 203, sass/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 208, sass/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  /* line 213, sass/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 218, sass/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 222, sass/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 232, sass/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 238, sass/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* partials */
+/**********************************************************************************
+ *  Drupal Prototyping stuff
+ **********************************************************************************/
+/* line 4, sass/partials/_homepage.scss */
+#block-system-main {
+  display: none;
+}
+
+/* line 8, sass/partials/_homepage.scss */
+body {
+  font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+  font-size: 16px;
+}
+
+/* line 13, sass/partials/_homepage.scss */
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* line 19, sass/partials/_homepage.scss */
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* line 25, sass/partials/_homepage.scss */
+.nav-section {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  margin-top: -61px;
+  transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+}
+/* line 32, sass/partials/_homepage.scss */
+.nav-section.nav-section-show {
+  margin-top: 0;
+  -webkit-box-shadow: 0px 8px 10px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 10px 2px rgba(0, 0, 0, 0.3);
+  transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+}
+
+/* line 41, sass/partials/_homepage.scss */
+.sticky-nav {
+  background-color: #b52419;
+  height: 61px;
+  width: 100%;
+  display: inline-block;
+  z-index: 999;
+}
+
+/* line 48, sass/partials/_homepage.scss */
+.stuck-top {
+  position: fixed;
+  top: 0;
+}
+
+/* line 56, sass/partials/_homepage.scss */
+.nav-box {
+  height: 100%;
+  padding: 0;
+}
+
+/*.nav-tab {
+  height: 44px;
+  width: 64px;
+  margin: -44px auto 0;
+  outline: 0;
+  display: none;
+  .nav-tab-link {
+    background: url(../images/nav-arrow-tab.jpg) no-repeat center center;
+    display: inline-block;
+    height: 44px;
+    width: 64px;
+    outline: 0;
+    text-decoration: none;
+  }
+}*/
+/* line 76, sass/partials/_homepage.scss */
+.nav-inner {
+  margin: 0 auto;
+  padding-top: 0;
+  zoom: 1;
+  width: 1280px;
+}
+/* line 81, sass/partials/_homepage.scss */
+.nav-inner h2 {
+  margin: 0;
+  background: url(../images/nav-logo-snapdragon.png) no-repeat center right;
+  width: 92px;
+  height: 61px;
+  float: right;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 76, sass/partials/_homepage.scss */
+  .nav-inner {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 76, sass/partials/_homepage.scss */
+  .nav-inner {
+    width: 720px;
+    padding: 0 10px;
+  }
+  /* line 94, sass/partials/_homepage.scss */
+  .nav-inner h2 {
+    margin: 3px 0 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 76, sass/partials/_homepage.scss */
+  .nav-inner {
+    padding: 0 10px;
+  }
+  /* line 100, sass/partials/_homepage.scss */
+  .nav-inner h2 {
+    float: left;
+    width: 96px;
+    background-position: top left;
+    margin: 3px 0 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 76, sass/partials/_homepage.scss */
+  .nav-inner {
+    padding: 0 10px;
+  }
+  /* line 109, sass/partials/_homepage.scss */
+  .nav-inner h2 {
+    float: left;
+    width: 96px;
+    background-position: top left;
+    margin: 3px 0 0;
+  }
+}
+
+/* line 118, sass/partials/_homepage.scss */
+nav {
+  height: 60px;
+}
+/* line 120, sass/partials/_homepage.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-top: 16px;
+  zoom: 1;
+}
+/* line 125, sass/partials/_homepage.scss */
+nav ul li {
+  font-size: 21px;
+  display: inline;
+  float: left;
+  zoom: 1;
+}
+/* line 134, sass/partials/_homepage.scss */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 30px 0 0;
+}
+/* line 138, sass/partials/_homepage.scss */
+nav a:visited, nav a:hover {
+  color: #fff;
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 118, sass/partials/_homepage.scss */
+  nav {
+    height: 70px;
+  }
+  /* line 144, sass/partials/_homepage.scss */
+  nav ul {
+    padding-top: 26px;
+  }
+  /* line 146, sass/partials/_homepage.scss */
+  nav ul li {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 118, sass/partials/_homepage.scss */
+  nav {
+    height: 70px;
+  }
+  /* line 153, sass/partials/_homepage.scss */
+  nav ul {
+    display: none;
+  }
+  /* line 155, sass/partials/_homepage.scss */
+  nav ul li {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 118, sass/partials/_homepage.scss */
+  nav {
+    height: 70px;
+  }
+  /* line 162, sass/partials/_homepage.scss */
+  nav ul {
+    display: none;
+  }
+}
+
+/* line 171, sass/partials/_homepage.scss */
+* html.lt-ie7 .sticky-nav {
+  position: absolute;
+  zoom: 1;
+  z-index: 100;
+  top: expression(( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+/* line 178, sass/partials/_homepage.scss */
+.experienceZone, .deviceZone, .campaignZone, .socialZone, .oemZone, .toutZone {
+  border-bottom: 0px solid #cfcfcf;
+  height: 100%;
+}
+
+/**/
+/* line 184, sass/partials/_homepage.scss */
+.deviceZone {
+  height: 100%;
+  color: white;
+  background-color: #1e1d1d;
+}
+
+/* line 186, sass/partials/_homepage.scss */
+.socialZone {
+  height: 100%;
+  background-color: #ffd457;
+  background-color: #ffc61a;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFC61A', endColorstr='#FFFFC61A');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc61a), color-stop(29%, #ffd457), color-stop(73%, #ffd457), color-stop(100%, #ffc61a));
+  background-image: -webkit-linear-gradient(top, #ffc61a 0%, #ffd457 29%, #ffd457 73%, #ffc61a 100%);
+  background-image: -moz-linear-gradient(top, #ffc61a 0%, #ffd457 29%, #ffd457 73%, #ffc61a 100%);
+  background-image: -o-linear-gradient(top, #ffc61a 0%, #ffd457 29%, #ffd457 73%, #ffc61a 100%);
+  background-image: linear-gradient(top, #ffc61a 0%, #ffd457 29%, #ffd457 73%, #ffc61a 100%);
+}
+
+/* line 200, sass/partials/_homepage.scss */
+.campaignZone {
+  height: 100%;
+  background: #00beb6 url(../images/video-bkgd-lrg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* line 205, sass/partials/_homepage.scss */
+.oemZone {
+  height: 100%;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* line 206, sass/partials/_homepage.scss */
+.toutZone {
+  height: 100%;
+  background-color: #ee3124;
+}
+
+/* line 209, sass/partials/_homepage.scss */
+.zone-box, .expZone-box, .campaignZone-box, .socialZone-box, .oemZone-box, .toutZone-box {
+  height: 100%;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 40px 10px;
+  color: white;
+  position: relative;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 209, sass/partials/_homepage.scss */
+  .zone-box, .expZone-box, .campaignZone-box, .socialZone-box, .oemZone-box, .toutZone-box {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 209, sass/partials/_homepage.scss */
+  .zone-box, .expZone-box, .campaignZone-box, .socialZone-box, .oemZone-box, .toutZone-box {
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 209, sass/partials/_homepage.scss */
+  .zone-box, .expZone-box, .campaignZone-box, .socialZone-box, .oemZone-box, .toutZone-box {
+    padding: 20px 10px;
+    width: 480px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 209, sass/partials/_homepage.scss */
+  .zone-box, .expZone-box, .campaignZone-box, .socialZone-box, .oemZone-box, .toutZone-box {
+    padding: 20px 10px;
+    width: 320px;
+  }
+}
+
+/**********************************************************************************
+ *  Experience Zone - Landing page
+ **********************************************************************************/
+/* line 236, sass/partials/_homepage.scss */
+.experienceZone {
+  background: #cc0000 url(../images/landing-bkgd.jpg) no-repeat center center;
+  background-size: 1843px 710px;
+  color: white;
+  position: relative;
+}
+/* line 244, sass/partials/_homepage.scss */
+.experienceZone .exp-chooser {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  width: 100px;
+}
+/* line 251, sass/partials/_homepage.scss */
+.experienceZone .nav-tab {
+  height: 44px;
+  width: 100%;
+  outline: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/* line 260, sass/partials/_homepage.scss */
+.experienceZone .nav-tab.nav-tab-hide {
+  opacity: 0;
+  z-index: 1;
+}
+/* line 264, sass/partials/_homepage.scss */
+.experienceZone .nav-tab .nav-tab-inner {
+  background-color: #861c14;
+  opacity: 0.2;
+  height: 44px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+/* line 272, sass/partials/_homepage.scss */
+.experienceZone .nav-tab .nav-tab-link {
+  background: url(../images/nav-arrow-tab_44x44.png) no-repeat center center;
+  display: inline-block;
+  height: 44px;
+  width: 100%;
+  outline: 0;
+  text-decoration: none;
+  position: absolute;
+  left: 0;
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 236, sass/partials/_homepage.scss */
+  .experienceZone {
+    display: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 236, sass/partials/_homepage.scss */
+  .experienceZone {
+    display: none;
+  }
+}
+
+/* line 297, sass/partials/_homepage.scss */
+.expZone-box {
+  padding: 0 10px;
+}
+/* line 300, sass/partials/_homepage.scss */
+.expZone-box .hero-tab {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 116px;
+  height: 113px;
+}
+
+/* line 312, sass/partials/_homepage.scss */
+.all-exp {
+  padding: 50px 0px 0px;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 312, sass/partials/_homepage.scss */
+  .all-exp {
+    padding: 50px 0px 0px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 312, sass/partials/_homepage.scss */
+  .all-exp {
+    padding: 50px 0px 0px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 312, sass/partials/_homepage.scss */
+  .all-exp {
+    padding: 0px 0px 40px;
+  }
+  /* line 322, sass/partials/_homepage.scss */
+  .all-exp h2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 312, sass/partials/_homepage.scss */
+  .all-exp {
+    padding: 0px 0px 20px;
+  }
+  /* line 328, sass/partials/_homepage.scss */
+  .all-exp h2 {
+    font-size: 20px;
+  }
+}
+
+/* line 334, sass/partials/_homepage.scss */
+.exp {
+  width: 1030px;
+  float: left;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 334, sass/partials/_homepage.scss */
+  .exp {
+    width: 770px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 334, sass/partials/_homepage.scss */
+  .exp {
+    width: 566px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 334, sass/partials/_homepage.scss */
+  .exp {
+    width: 460px;
+    float: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 334, sass/partials/_homepage.scss */
+  .exp {
+    width: 300px;
+    float: none;
+  }
+}
+/* line 351, sass/partials/_homepage.scss */
+.exp .exp-content {
+  float: left;
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 351, sass/partials/_homepage.scss */
+  .exp .exp-content {
+    float: none;
+  }
+  /* line 355, sass/partials/_homepage.scss */
+  .exp .exp-content .exp-2, .exp .exp-content .exp-3 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 351, sass/partials/_homepage.scss */
+  .exp .exp-content {
+    float: none;
+  }
+  /* line 361, sass/partials/_homepage.scss */
+  .exp .exp-content .exp-2, .exp .exp-content .exp-3 {
+    display: none;
+  }
+}
+
+/* line 368, sass/partials/_homepage.scss */
+.exp-description-box {
+  margin: 0 20px 0 468px;
+  overflow: hidden;
+  position: relative;
+  width: 542px;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 368, sass/partials/_homepage.scss */
+  .exp-description-box {
+    margin: 0 20px 0 404px;
+    width: 348px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 368, sass/partials/_homepage.scss */
+  .exp-description-box {
+    margin: 0 20px 0 265px;
+    width: 281px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 368, sass/partials/_homepage.scss */
+  .exp-description-box {
+    margin: 10px 0 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 368, sass/partials/_homepage.scss */
+  .exp-description-box {
+    margin: 10px 0 0;
+    width: 100%;
+  }
+}
+/* line 389, sass/partials/_homepage.scss */
+.exp-description-box .exp-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 389, sass/partials/_homepage.scss */
+  .exp-description-box .exp-description {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 389, sass/partials/_homepage.scss */
+  .exp-description-box .exp-description {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 389, sass/partials/_homepage.scss */
+  .exp-description-box .exp-description {
+    font-size: 14px;
+    position: relative;
+  }
+  /* line 403, sass/partials/_homepage.scss */
+  .exp-description-box .exp-description h3 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 389, sass/partials/_homepage.scss */
+  .exp-description-box .exp-description {
+    font-size: 14px;
+    position: relative;
+  }
+  /* line 410, sass/partials/_homepage.scss */
+  .exp-description-box .exp-description h3 {
+    font-size: 18px;
+  }
+}
+/* line 415, sass/partials/_homepage.scss */
+.exp-description-box .exp-description.visible {
+  display: block;
+}
+/* line 422, sass/partials/_homepage.scss */
+.exp-description-box .exp-links-container {
+  margin-top: 1em;
+}
+
+/* line 427, sass/partials/_homepage.scss */
+.exp-media-box {
+  float: left;
+  width: 448px;
+  height: 252px;
+  overflow: hidden;
+  position: relative;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 427, sass/partials/_homepage.scss */
+  .exp-media-box {
+    width: 384px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 427, sass/partials/_homepage.scss */
+  .exp-media-box {
+    width: 245px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 427, sass/partials/_homepage.scss */
+  .exp-media-box {
+    width: 400px;
+    height: auto;
+    float: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 427, sass/partials/_homepage.scss */
+  .exp-media-box {
+    width: 300px;
+    height: auto;
+    float: none;
+  }
+}
+/* line 449, sass/partials/_homepage.scss */
+.exp-media-box img {
+  width: 100%;
+}
+/* line 453, sass/partials/_homepage.scss */
+.exp-media-box .exp-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 453, sass/partials/_homepage.scss */
+  .exp-media-box .exp-media {
+    position: relative;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 453, sass/partials/_homepage.scss */
+  .exp-media-box .exp-media {
+    position: relative;
+  }
+}
+/* line 464, sass/partials/_homepage.scss */
+.exp-media-box .exp-media.visible {
+  display: block;
+}
+
+/* line 470, sass/partials/_homepage.scss */
+.exp.show {
+  display: block;
+}
+
+/* line 474, sass/partials/_homepage.scss */
+.exp.hide {
+  display: none;
+}
+
+/**********************************************************************************
+ *  Device Zone - Zone 1
+ **********************************************************************************/
+/*******************************
+ *  Start based on new code
+ *******************************/
+/* line 489, sass/partials/_homepage.scss */
+#zone1 {
+  background-color: #232326;
+  color: #fff;
+  position: relative;
+  height: 100%;
+  padding: 61px 0 0;
+  margin: 0;
+}
+
+/* line 498, sass/partials/_homepage.scss */
+.zone1-inner {
+  width: 1200px;
+  height: 660px;
+  margin: 0 auto;
+  position: relative;
+  /*.view-content {
+    position: relative;
+    width: 1200px;
+    height: 660px;
+  }
+  .field-content {
+    width: 300px;
+    height: 132px;
+    //width: 1200px;
+    //height: 660px;
+    position: relative;
+  }*/
+}
+/* line 515, sass/partials/_homepage.scss */
+.zone1-inner .featured-device-tout {
+  position: absolute;
+  width: 1200px;
+  text-align: center;
+}
+/* line 520, sass/partials/_homepage.scss */
+.zone1-inner .featured-device-tout img {
+  width: 100%;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 498, sass/partials/_homepage.scss */
+  .zone1-inner {
+    width: 960px;
+  }
+  /* line 529, sass/partials/_homepage.scss */
+  .zone1-inner .featured-device-tout {
+    position: absolute;
+    width: 960px;
+    padding-top: 50px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 498, sass/partials/_homepage.scss */
+  .zone1-inner {
+    width: 100%;
+    height: 785px;
+  }
+  /* line 538, sass/partials/_homepage.scss */
+  .zone1-inner .featured-device-tout {
+    position: absolute;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 498, sass/partials/_homepage.scss */
+  .zone1-inner {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 547, sass/partials/_homepage.scss */
+  .zone1-inner .featured-device-tout {
+    position: relative;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 498, sass/partials/_homepage.scss */
+  .zone1-inner {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 556, sass/partials/_homepage.scss */
+  .zone1-inner .featured-device-tout {
+    position: relative;
+    width: 100%;
+  }
+}
+
+/* line 564, sass/partials/_homepage.scss */
+.modal-container {
+  width: 1200px;
+  height: 100%;
+  max-height: 527px;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 570, sass/partials/_homepage.scss */
+.modal-container .modal-detail {
+  background: #232326 url(../images/modal-detail-bkgd.jpg) no-repeat left top;
+  width: 1200px;
+  height: 527px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  -webkit-transition: opacity 300ms ease;
+}
+/* line 582, sass/partials/_homepage.scss */
+.modal-container .modal-detail.active {
+  z-index: 5;
+  opacity: 1;
+  transition: opacity 300ms ease;
+  -webkit-transition: opacity 300ms ease;
+}
+/* line 590, sass/partials/_homepage.scss */
+.modal-container .modal-detail .device-main-image {
+  float: left;
+  width: 58.333333%;
+  max-width: 700px;
+  height: 100%;
+}
+/* line 595, sass/partials/_homepage.scss */
+.modal-container .modal-detail .device-main-image .main-image-inner {
+  padding: 100px 30px 0;
+  text-align: center;
+}
+/* line 600, sass/partials/_homepage.scss */
+.modal-container .modal-detail .device-main-content {
+  float: left;
+  display: inline-block;
+  width: 41%;
+  max-width: 500px;
+  margin-top: 80px;
+  padding-right: 85px;
+}
+/* line 607, sass/partials/_homepage.scss */
+.modal-container .modal-detail .device-main-content .heading-block {
+  margin-bottom: 50px;
+}
+/* line 610, sass/partials/_homepage.scss */
+.modal-container .modal-detail .device-main-content .heading-block .content-title h2 {
+  font-size: 36px !important;
+  font-weight: normal !important;
+  margin: 0 !important;
+}
+/* line 616, sass/partials/_homepage.scss */
+.modal-container .modal-detail .device-main-content .heading-block .content-subhead {
+  font-size: 18px !important;
+}
+/* line 620, sass/partials/_homepage.scss */
+.modal-container .modal-detail .device-main-content .content-body {
+  font-size: 14px;
+  color: #767676;
+}
+/* line 625, sass/partials/_homepage.scss */
+.modal-container .modal-detail .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+}
+/* line 630, sass/partials/_homepage.scss */
+.modal-container .modal-detail .close-btn a {
+  background: black url(../images/device-close-btn.png) no-repeat left top;
+  display: inline-block;
+  outline: 0;
+  text-decoration: none;
+  width: 36px;
+  height: 36px;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 564, sass/partials/_homepage.scss */
+  .modal-container {
+    width: 960px;
+  }
+  /* line 642, sass/partials/_homepage.scss */
+  .modal-container .modal-detail {
+    width: 960px;
+  }
+  /* line 644, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-content {
+    padding-right: 70px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 564, sass/partials/_homepage.scss */
+  .modal-container {
+    width: 100%;
+  }
+  /* line 651, sass/partials/_homepage.scss */
+  .modal-container .modal-detail {
+    width: 100%;
+    background: #232326 url(../images/modal-detail-bkgd.jpg) no-repeat left -38px;
+  }
+  /* line 655, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-image .main-image-inner {
+    padding-top: 43px;
+  }
+  /* line 659, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-content {
+    margin-top: 40px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 564, sass/partials/_homepage.scss */
+  .modal-container {
+    width: 100%;
+    height: 100%;
+    position: static;
+  }
+  /* line 669, sass/partials/_homepage.scss */
+  .modal-container .modal-detail {
+    width: 100%;
+    background-color: #232326;
+    background-image: none;
+    height: 345px;
+  }
+  /* line 674, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-image {
+    float: none;
+    height: 100%;
+    width: 100%;
+    background-color: #232326;
+  }
+  /* line 679, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-image .main-image-inner {
+    padding: 43px 10px 0;
+    height: 100%;
+  }
+  /* line 682, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-image .main-image-inner img {
+    height: 100%;
+  }
+  /* line 687, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-content {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    max-width: 100%;
+    background-color: #232326;
+  }
+  /* line 694, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-content .heading-block {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 564, sass/partials/_homepage.scss */
+  .modal-container {
+    width: 100%;
+    height: 100%;
+    position: static;
+  }
+  /* line 704, sass/partials/_homepage.scss */
+  .modal-container .modal-detail {
+    width: 100%;
+    background-color: #232326;
+    background-image: none;
+    height: 345px;
+  }
+  /* line 709, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-image {
+    float: none;
+    height: 100%;
+    width: 100%;
+    background-color: #232326;
+  }
+  /* line 714, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-image .main-image-inner {
+    padding: 43px 10px 0;
+    height: 100%;
+  }
+  /* line 717, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-image .main-image-inner img {
+    height: 100%;
+  }
+  /* line 722, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-content {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #232326;
+    max-width: 100%;
+  }
+  /* line 729, sass/partials/_homepage.scss */
+  .modal-container .modal-detail .device-main-content .heading-block {
+    margin-bottom: 10px;
+  }
+}
+
+/* line 737, sass/partials/_homepage.scss */
+.device-link-container {
+  margin-top: 40px;
+}
+/* line 739, sass/partials/_homepage.scss */
+.device-link-container .device-link {
+  margin: 0 20px 20px 0;
+  min-width: 183px;
+  float: left;
+}
+/* line 743, sass/partials/_homepage.scss */
+.device-link-container .device-link .device-link-content {
+  text-align: center;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  height: 37px;
+  background: #000;
+}
+/* line 749, sass/partials/_homepage.scss */
+.device-link-container .device-link .device-link-content a {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  background: url(../images/device-link-arrow.png) no-repeat right top;
+  padding: 8px 32px 8px 10px;
+  min-width: 183px;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 758, sass/partials/_homepage.scss */
+.device-link-container .device-link .device-link-content a:hover, .device-link-container .device-link .device-link-content a:visited {
+  color: #fff;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 765, sass/partials/_homepage.scss */
+  .device-link-container .device-link {
+    margin: 0 15px 15px 0;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 737, sass/partials/_homepage.scss */
+  .device-link-container {
+    margin-top: 15px;
+  }
+  /* line 771, sass/partials/_homepage.scss */
+  .device-link-container .device-link {
+    margin: 0 10px 10px 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 777, sass/partials/_homepage.scss */
+  .device-link-container .device-link {
+    margin: 0 10px 10px 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 737, sass/partials/_homepage.scss */
+  .device-link-container {
+    margin-top: 10px;
+  }
+  /* line 783, sass/partials/_homepage.scss */
+  .device-link-container .device-link {
+    margin: 0 5px 5px 0;
+  }
+}
+
+/* line 789, sass/partials/_homepage.scss */
+.node-container {
+  width: 100%;
+}
+/* line 793, sass/partials/_homepage.scss */
+.node-container .marker-bar-rail {
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 803, sass/partials/_homepage.scss */
+.node-container .marker-bar-rail .marker-bar-container {
+  background: url(../images/node-tab-marker-sprite.png) no-repeat 0 0;
+  width: 29px;
+  height: 8px;
+  position: absolute;
+  left: -29px;
+}
+/* line 809, sass/partials/_homepage.scss */
+.node-container .marker-bar-rail .marker-bar-container.pos-tab-0 {
+  left: 136px;
+}
+/* line 812, sass/partials/_homepage.scss */
+.node-container .marker-bar-rail .marker-bar-container.pos-tab-1 {
+  left: 436px;
+}
+/* line 815, sass/partials/_homepage.scss */
+.node-container .marker-bar-rail .marker-bar-container.pos-tab-2 {
+  left: 736px;
+}
+/* line 818, sass/partials/_homepage.scss */
+.node-container .marker-bar-rail .marker-bar-container.pos-tab-3 {
+  left: 1036px;
+}
+/* line 823, sass/partials/_homepage.scss */
+.node-container .node-tab {
+  background-color: #1b1b1e;
+  width: 300px;
+  height: 124px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  float: left;
+}
+/* line 834, sass/partials/_homepage.scss */
+.node-container .node-tab:hover .node-hover-bkgd {
+  opacity: 1;
+  transition: opacity 300ms ease;
+  -webkit-transition: opacity 300ms ease;
+}
+/* line 839, sass/partials/_homepage.scss */
+.node-container .node-tab .color-bar {
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* line 846, sass/partials/_homepage.scss */
+.node-container .node-tab .node-hover-bkgd {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/node-hover-state.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  transition: opacity 300ms ease;
+  -webkit-transition: opacity 300ms ease;
+}
+/* line 856, sass/partials/_homepage.scss */
+.node-container .node-tab .device-container {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+/* line 860, sass/partials/_homepage.scss */
+.node-container .node-tab .device-container .device-title {
+  float: left;
+  height: 132px;
+  padding-top: 5px;
+  width: 41%;
+}
+/* line 865, sass/partials/_homepage.scss */
+.node-container .node-tab .device-container .device-title h3 {
+  line-height: 132px !important;
+  margin: 0 !important;
+  padding-left: 20px;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+/* line 873, sass/partials/_homepage.scss */
+.node-container .node-tab .device-container .device-thumb {
+  display: inline-block;
+  float: right;
+  height: 124px;
+  padding: 11px 10px 0;
+  text-align: center;
+  width: 58.3333333333%;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 823, sass/partials/_homepage.scss */
+  .node-container .node-tab {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 823, sass/partials/_homepage.scss */
+  .node-container .node-tab {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 823, sass/partials/_homepage.scss */
+  .node-container .node-tab {
+    width: 100%;
+  }
+  /* line 891, sass/partials/_homepage.scss */
+  .node-container .node-tab .device-title h3 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 823, sass/partials/_homepage.scss */
+  .node-container .node-tab {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 789, sass/partials/_homepage.scss */
+  .node-container {
+    height: 264px;
+  }
+  /* line 906, sass/partials/_homepage.scss */
+  .node-container .marker-bar-rail {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 789, sass/partials/_homepage.scss */
+  .node-container {
+    top: 0;
+    height: 496px;
+  }
+  /* line 914, sass/partials/_homepage.scss */
+  .node-container .marker-bar-rail {
+    display: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 789, sass/partials/_homepage.scss */
+  .node-container {
+    top: 0;
+    height: 496px;
+  }
+  /* line 922, sass/partials/_homepage.scss */
+  .node-container .marker-bar-rail {
+    display: none;
+  }
+}
+
+/* line 929, sass/partials/_homepage.scss */
+.tab-0 {
+  cursor: pointer;
+}
+/* line 933, sass/partials/_homepage.scss */
+.tab-0 .marker-bar.active {
+  background-position: 50% 0px;
+}
+/* line 937, sass/partials/_homepage.scss */
+.tab-0 .color-bar {
+  background: #00beb6;
+}
+
+/* line 943, sass/partials/_homepage.scss */
+.tab-1 {
+  cursor: pointer;
+}
+/* line 947, sass/partials/_homepage.scss */
+.tab-1 .marker-bar.active {
+  background-position: 50% -14px;
+}
+/* line 951, sass/partials/_homepage.scss */
+.tab-1 .color-bar {
+  background-color: #fed94f;
+}
+
+/* line 955, sass/partials/_homepage.scss */
+.modal-detail {
+  left: -300px;
+}
+
+/* line 959, sass/partials/_homepage.scss */
+.tab-2 {
+  cursor: pointer;
+}
+/* line 963, sass/partials/_homepage.scss */
+.tab-2 .marker-bar.active {
+  background-position: 50% -28px;
+}
+/* line 967, sass/partials/_homepage.scss */
+.tab-2 .color-bar {
+  background: #ee3124;
+}
+
+/* line 971, sass/partials/_homepage.scss */
+.modal-detail {
+  left: -600px;
+}
+
+/* line 975, sass/partials/_homepage.scss */
+.tab-3 {
+  cursor: pointer;
+}
+/* line 979, sass/partials/_homepage.scss */
+.tab-3 .marker-bar.active {
+  background-position: 50% -42px;
+}
+/* line 983, sass/partials/_homepage.scss */
+.tab-3 .color-bar {
+  background: #3c3f41;
+}
+
+/* line 987, sass/partials/_homepage.scss */
+.modal-detail {
+  left: -600px;
+}
+
+/*******************************
+ *  End based on new code
+ *******************************/
+/**********************************************************************************
+ *  Campaign Zone
+ **********************************************************************************/
+/* line 1003, sass/partials/_homepage.scss */
+.campaignZone-box {
+  min-height: 700px;
+  padding: 50px 0 30px;
+}
+/* line 1009, sass/partials/_homepage.scss */
+.campaignZone-box .campaign-inner {
+  margin: 0 auto;
+  height: 100%;
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1003, sass/partials/_homepage.scss */
+  .campaignZone-box {
+    min-height: 100%;
+  }
+  /* line 1015, sass/partials/_homepage.scss */
+  .campaignZone-box .campaign-inner {
+    width: 640px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1003, sass/partials/_homepage.scss */
+  .campaignZone-box {
+    min-height: 100%;
+  }
+  /* line 1019, sass/partials/_homepage.scss */
+  .campaignZone-box .campaign-inner {
+    width: 256px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1003, sass/partials/_homepage.scss */
+  .campaignZone-box {
+    min-height: 100%;
+  }
+  /* line 1023, sass/partials/_homepage.scss */
+  .campaignZone-box .campaign-inner {
+    width: 256px;
+  }
+}
+
+/* line 1028, sass/partials/_homepage.scss */
+.campaign-heading .heading {
+  display: table;
+  margin: 0 auto;
+}
+/* line 1031, sass/partials/_homepage.scss */
+.campaign-heading .heading h2 {
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+}
+/* line 1038, sass/partials/_homepage.scss */
+.campaign-heading .sub-heading {
+  display: table;
+  margin: 15px auto 0;
+}
+/* line 1041, sass/partials/_homepage.scss */
+.campaign-heading .sub-heading h3 {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1050, sass/partials/_homepage.scss */
+  .campaign-heading .heading h2 {
+    font-size: 22px;
+  }
+  /* line 1055, sass/partials/_homepage.scss */
+  .campaign-heading .sub-heading h3 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1062, sass/partials/_homepage.scss */
+  .campaign-heading .heading h2 {
+    font-size: 22px;
+  }
+  /* line 1067, sass/partials/_homepage.scss */
+  .campaign-heading .sub-heading h3 {
+    font-size: 16px;
+  }
+}
+
+/* line 1074, sass/partials/_homepage.scss */
+.campaign-media {
+  display: table;
+  height: 432px;
+  margin: 20px auto 0;
+}
+/* line 1083, sass/partials/_homepage.scss */
+.campaign-media .media-shadow img {
+  vertical-align: top;
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1074, sass/partials/_homepage.scss */
+  .campaign-media {
+    height: 360px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1074, sass/partials/_homepage.scss */
+  .campaign-media {
+    height: 144px;
+  }
+}
+/* line 1093, sass/partials/_homepage.scss */
+.campaign-media object {
+  width: 100%;
+  height: 100%;
+}
+
+/**********************************************************************************
+ *  Social Zone
+ **********************************************************************************/
+/* line 1104, sass/partials/_homepage.scss */
+.socialZone-box {
+  padding: 75px 0px;
+}
+/* line 1108, sass/partials/_homepage.scss */
+.socialZone-box .social-inner {
+  margin: 0 auto;
+  height: 100%;
+  width: 1080px;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 1108, sass/partials/_homepage.scss */
+  .socialZone-box .social-inner {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1108, sass/partials/_homepage.scss */
+  .socialZone-box .social-inner {
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1108, sass/partials/_homepage.scss */
+  .socialZone-box .social-inner {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1108, sass/partials/_homepage.scss */
+  .socialZone-box .social-inner {
+    width: 320px;
+  }
+}
+/* line 1124, sass/partials/_homepage.scss */
+.socialZone-box .social-inner img {
+  width: 100%;
+}
+
+/* line 1131, sass/partials/_homepage.scss */
+.column-container {
+  width: 1080px;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 1131, sass/partials/_homepage.scss */
+  .column-container {
+    width: 960px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1131, sass/partials/_homepage.scss */
+  .column-container {
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1131, sass/partials/_homepage.scss */
+  .column-container {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1131, sass/partials/_homepage.scss */
+  .column-container {
+    width: 320px;
+  }
+}
+/* line 1145, sass/partials/_homepage.scss */
+.column-container .social-column {
+  float: left;
+  margin-right: 30px;
+  width: 334px;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 1145, sass/partials/_homepage.scss */
+  .column-container .social-column {
+    width: 294px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1145, sass/partials/_homepage.scss */
+  .column-container .social-column {
+    width: 220px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1145, sass/partials/_homepage.scss */
+  .column-container .social-column {
+    float: none;
+    width: 400px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1145, sass/partials/_homepage.scss */
+  .column-container .social-column {
+    float: none;
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+/* line 1169, sass/partials/_homepage.scss */
+.column-container .social-column:last-child {
+  margin-right: 0;
+}
+/* line 1173, sass/partials/_homepage.scss */
+.column-container .social-column .weibo-container p {
+  margin-top: 10px;
+  padding: 0 5px;
+}
+/* line 1178, sass/partials/_homepage.scss */
+.column-container .social-column .youku-container {
+  margin-bottom: 30px;
+}
+/* line 1180, sass/partials/_homepage.scss */
+.column-container .social-column .youku-container:last-child {
+  margin-bottom: 0;
+}
+
+/**********************************************************************************
+ *  OEM Zone
+ **********************************************************************************/
+/* line 1191, sass/partials/_homepage.scss */
+.oemZone-box {
+  padding: 65px 0 40px 0;
+  /*height: 400px;*/
+}
+/* line 1196, sass/partials/_homepage.scss */
+.oemZone-box .oem-inner {
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1191, sass/partials/_homepage.scss */
+  .oemZone-box {
+    width: 480px;
+  }
+}
+
+/* line 1207, sass/partials/_homepage.scss */
+.oem-list-box {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 1211, sass/partials/_homepage.scss */
+.oem-list-box .final-content-holder {
+  position: absolute;
+  top: 130px;
+}
+/* line 1215, sass/partials/_homepage.scss */
+.oem-list-box .list-box-header {
+  background: url(../images/list-box-header-bkgd.jpg) repeat-y;
+  background-size: cover;
+  float: left;
+  height: 252px;
+  width: 300px;
+  text-align: center;
+}
+/* line 1222, sass/partials/_homepage.scss */
+.oem-list-box .list-box-header:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+/* line 1229, sass/partials/_homepage.scss */
+.oem-list-box .list-box-header .heading {
+  display: inline-block;
+  vertical-align: middle;
+  width: 295px;
+}
+/* line 1233, sass/partials/_homepage.scss */
+.oem-list-box .list-box-header .heading h2 {
+  font-size: 36px;
+  font-weight: normal;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 1207, sass/partials/_homepage.scss */
+  .oem-list-box {
+    width: 100%;
+  }
+  /* line 1241, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header {
+    width: 240px;
+    height: 202px;
+  }
+  /* line 1244, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header .heading {
+    width: 235px;
+  }
+  /* line 1246, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header .heading h2 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1207, sass/partials/_homepage.scss */
+  .oem-list-box {
+    width: 100%;
+  }
+  /* line 1254, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header {
+    width: 180px;
+    height: 152px;
+  }
+  /* line 1257, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header .heading {
+    width: 175px;
+  }
+  /* line 1259, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header .heading h2 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1207, sass/partials/_homepage.scss */
+  .oem-list-box {
+    width: 100%;
+  }
+  /* line 1267, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header {
+    width: 100%;
+    height: 130px;
+  }
+  /* line 1271, sass/partials/_homepage.scss */
+  .oem-list-box .list-box-header .heading h2 {
+    font-size: 28px;
+  }
+}
+
+/*
+.oem-columns {
+  float: left;
+  height: 419px;
+  width: 900px;
+  .oem-list-column {
+    margin: 0;
+    float: left;
+    .oem-list {
+      list-style: none;
+      margin:0 auto;
+      padding: 0;
+      zoom: 1;
+
+      li {
+        display: inline-block;
+        margin: 0;
+        //height: 139px;
+        width: 300px;
+        text-align: left;
+        float: left;
+        zoom: 1;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
+
+  @include breakpoint(desktop-960) {
+    width: 720px;
+    height: 100%;
+    .oem-list-column {
+      .oem-list {
+        li {
+          width: 240px;
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    width: 540px;
+    height: 100%;
+    .oem-list-column {
+      .oem-list {
+        li {
+          width: 180px;
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-l) {
+    width: 100%;
+    height: 100%;
+    .oem-list-column {
+      .oem-list {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-p) {
+
+  }
+}
+
+.oem-list-item {
+  .uc-container {
+    width: 300px;
+    height: 126px;
+    float: left;
+    .uc-initial-content-sprite {
+      background: #1c1b1e url(../images/oem-logo-bkgd.jpg) no-repeat 0 0;
+      background-size: cover;
+      width: 300px;
+      height: 126px;
+      cursor: pointer;
+      img {
+        height: 100%;
+        opacity: 0.3;
+      }
+      &:hover img {
+        opacity: 1.0;
+      }
+    }
+  }
+  @include breakpoint(desktop-960) {
+    .uc-container {
+      width: 240px;
+      height: 101px;
+      .uc-initial-content-sprite {
+        width: 240px;
+        height: 100%;
+      }
+
+    }
+  }
+  @include breakpoint(tablet) {
+    .uc-container {
+      width: 180px;
+      height: 76px;
+      .uc-initial-content-sprite {
+        width: 180px;
+        height: 100%;
+      }
+
+    }
+  }
+  @include breakpoint(mobile-l) {
+    .uc-container {
+      width: 480px;
+      height: 130px;
+      .uc-initial-content-sprite {
+        width: 100%;
+        height: 100%;
+        img {
+          margin: 0 auto;
+        }
+      }
+
+    }
+  }
+  @include breakpoint(mobile-p) {
+
+  }
+}
+*/
+/* line 1416, sass/partials/_homepage.scss */
+.oem-0 .oem-content-container, .oem-0 .uc-single, .oem-0 .uc-final, .oem-0 .uc-back, .oem-0 .uc-front, .oem-4 .oem-content-container, .oem-4 .uc-single, .oem-4 .uc-final, .oem-4 .uc-back, .oem-4 .uc-front {
+  background: #fed94f;
+}
+/* line 1419, sass/partials/_homepage.scss */
+.oem-0:hover .uc-initial-content-sprite, .oem-4:hover .uc-initial-content-sprite {
+  background: #fed94f;
+}
+
+/* line 1425, sass/partials/_homepage.scss */
+.oem-1 .oem-content-container, .oem-1 .uc-single, .oem-1 .uc-final, .oem-1 .uc-back, .oem-1 .uc-front, .oem-5 .oem-content-container, .oem-5 .uc-single, .oem-5 .uc-final, .oem-5 .uc-back, .oem-5 .uc-front {
+  background: #00beb6;
+}
+/* line 1428, sass/partials/_homepage.scss */
+.oem-1:hover .uc-initial-content-sprite, .oem-5:hover .uc-initial-content-sprite {
+  background: #00beb6;
+}
+
+/* line 1434, sass/partials/_homepage.scss */
+.oem-2 .oem-content-container, .oem-2 .uc-single, .oem-2 .uc-final, .oem-2 .uc-back, .oem-2 .uc-front, .oem-3 .oem-content-container, .oem-3 .uc-single, .oem-3 .uc-final, .oem-3 .uc-back, .oem-3 .uc-front {
+  background: #ee3124;
+}
+/* line 1437, sass/partials/_homepage.scss */
+.oem-2:hover .uc-initial-content-sprite, .oem-3:hover .uc-initial-content-sprite {
+  background: #ee3124;
+}
+
+/* line 1443, sass/partials/_homepage.scss */
+.uc-final-content .logo-phone, .uc-final-content .oem-content-container {
+  width: 600px;
+  height: 252px;
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+/* line 1449, sass/partials/_homepage.scss */
+.uc-final-content .logo-phone img, .uc-final-content .oem-content-container img {
+  height: 100%;
+  width: 100%;
+}
+/* line 1453, sass/partials/_homepage.scss */
+.uc-final-content .logo-phone .logo-container, .uc-final-content .oem-content-container .logo-container {
+  position: absolute;
+  top: 0;
+}
+/* line 1456, sass/partials/_homepage.scss */
+.uc-final-content .logo-phone .logo-container img, .uc-final-content .oem-content-container .logo-container img {
+  opacity: 0.75;
+}
+/* line 1460, sass/partials/_homepage.scss */
+.uc-final-content .logo-phone .phone-container, .uc-final-content .logo-phone .logo-container, .uc-final-content .oem-content-container .phone-container, .uc-final-content .oem-content-container .logo-container {
+  height: 100%;
+}
+/* line 1464, sass/partials/_homepage.scss */
+.uc-final-content .oem-content-container {
+  padding: 40px 40px 0 40px;
+}
+/* line 1467, sass/partials/_homepage.scss */
+.uc-final-content .oem-content-container .heading h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+/* line 1474, sass/partials/_homepage.scss */
+.uc-final-content .oem-content-container .device-link-container {
+  margin-top: 15px;
+}
+/* line 1477, sass/partials/_homepage.scss */
+.uc-final-content .oem-content-container .oem-content {
+  margin: 15px 0 0;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 1482, sass/partials/_homepage.scss */
+  .uc-final-content .logo-phone, .uc-final-content .oem-content-container {
+    width: 480px;
+    height: 202px;
+  }
+  /* line 1486, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container {
+    padding: 40px 40px 0 40px;
+  }
+  /* line 1489, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container .heading h2 {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1496, sass/partials/_homepage.scss */
+  .uc-final-content .logo-phone, .uc-final-content .oem-content-container {
+    width: 360px;
+    height: 152px;
+  }
+  /* line 1501, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container {
+    padding: 20px 20px 0 20px;
+  }
+  /* line 1504, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container .heading h2 {
+    font-size: 18px;
+  }
+  /* line 1508, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container .oem-content {
+    margin: 5px 0 0;
+    font-size: 12px;
+  }
+  /* line 1512, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container .device-link-container {
+    margin-top: 5px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1518, sass/partials/_homepage.scss */
+  .uc-final-content .logo-phone, .uc-final-content .oem-content-container {
+    width: 100%;
+    height: 195px;
+  }
+  /* line 1522, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container {
+    padding: 20px 20px 0 20px;
+  }
+  /* line 1525, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container .heading h2 {
+    font-size: 22px;
+  }
+  /* line 1529, sass/partials/_homepage.scss */
+  .uc-final-content .oem-content-container .oem-content {
+    font-size: 14px;
+  }
+}
+
+/*
+***********************************
+ CHANGING TO DIVS
+***********************************
+*/
+/*
+.oem-columns {
+  height: 419px;
+  width: 900px;
+  .uc-container {
+    //display: inline-block;
+    margin: 0;
+    //height: 139px;
+    width: 300px;
+    text-align: left;
+    float: left;
+    zoom: 1;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(desktop-960) {
+    width: 720px;
+    height: 100%;
+    .oem-list-column {
+      div.oem-list {
+        div.oem-list-item {
+          width: 240px;
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    width: 540px;
+    height: 100%;
+    .oem-list-column {
+      div.oem-list {
+        div.oem-list-item {
+          width: 180px;
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-l) {
+    width: 100%;
+    height: 100%;
+    .oem-list-column {
+      div.oem-list {
+        div.oem-list-item {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-p) {
+
+  }
+}
+
+.uc-container {
+  width: 300px;
+  height: 126px;
+  float: left;
+  .uc-initial-content-sprite {
+    background: #1c1b1e url(../images/oem-logo-bkgd.jpg) no-repeat 0 0;
+    background-size: cover;
+    width: 300px;
+    height: 126px;
+    cursor: pointer;
+    img {
+      height: 100%;
+      opacity: 0.3;
+    }
+    &:hover img {
+      opacity: 1.0;
+    }
+  }
+  @include breakpoint(desktop-960) {
+    .uc-container {
+      width: 240px;
+      height: 101px;
+      .uc-initial-content-sprite {
+        width: 240px;
+        height: 100%;
+      }
+
+    }
+  }
+  @include breakpoint(tablet) {
+    .uc-container {
+      width: 180px;
+      height: 76px;
+      .uc-initial-content-sprite {
+        width: 180px;
+        height: 100%;
+      }
+
+    }
+  }
+  @include breakpoint(mobile-l) {
+    .uc-container {
+      width: 480px;
+      height: 130px;
+      .uc-initial-content-sprite {
+        width: 100%;
+        height: 100%;
+        img {
+          margin: 0 auto;
+        }
+      }
+
+    }
+  }
+  @include breakpoint(mobile-p) {
+
+  }
+}
+
+*/
+/*
+.oem-3 {
+  .oem-content-container, .uc-single, .uc-final, .uc-initial-content, .uc-back, .uc-front {
+    background: $red;
+  }
+  .uc-initial-content-sprite {
+    background-image: url(../images/oem-htc-sprite.jpg);
+  }
+}
+
+.oem-4 {
+  .oem-content-container, .uc-single, .uc-final, .uc-initial-content, .uc-back, .uc-front {
+    background: $yellow;
+  }
+  .uc-initial-content-sprite {
+    background-image: url(../images/oem-oppo-sprite.jpg);
+  }
+}
+
+.oem-5 {
+  .oem-content-container, .uc-single, .uc-final, .uc-initial-content, .uc-back, .uc-front {
+    background: $cyan;
+  }
+  .uc-initial-content-sprite {
+    background-image: url(../images/oem-huawei-sprite.jpg);
+  }
+}
+*/
+/*.uc-initial-content-sprite {
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 209px;
+  cursor: pointer;
+  &.zte {
+    background-image: url(../images/oem-zte-sprite.jpg);
+  }
+  &.nokia {
+    background-image: url(../images/oem-nokia-sprite.jpg);
+  }
+  &.xiaomi {
+    background-image: url(../images/oem-xiaomi-sprite.jpg);
+  }
+  &.htc {
+    background-image: url(../images/oem-htc-sprite.jpg);
+  }
+  &.oppo {
+    background-image: url(../images/oem-oppo-sprite.jpg);
+  }
+  &.huawei {
+    background-image: url(../images/oem-huawei-sprite.jpg);
+  }
+
+}*/
+/*
+.uc-container .uc-single,
+.uc-container .uc-final,
+.uc-container .uc-initial-content,
+.uc-container .uc-back,
+.uc-container .uc-front {
+    background: #00beb6;
+}*/
+/**********************************************************************************
+ *  Tout Zone
+ **********************************************************************************/
+/* line 1739, sass/partials/_homepage.scss */
+.toutZone-box {
+  padding: 40px 10px;
+}
+
+/* line 1748, sass/partials/_homepage.scss */
+.tout-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+}
+/* line 1753, sass/partials/_homepage.scss */
+.tout-list li {
+  display: inline-block;
+  width: 334px;
+  text-align: center;
+  margin: 0 30px 0 0;
+  zoom: 1;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 1753, sass/partials/_homepage.scss */
+  .tout-list li {
+    width: 290px;
+    margin: 0 30px 10px 0;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1753, sass/partials/_homepage.scss */
+  .tout-list li {
+    width: 210px;
+    margin: 0 30px 10px 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1753, sass/partials/_homepage.scss */
+  .tout-list li {
+    width: 400px;
+    margin: 0 0 10px 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1753, sass/partials/_homepage.scss */
+  .tout-list li {
+    width: 300px;
+    margin: 0 0 10px 0;
+  }
+}
+/* line 1777, sass/partials/_homepage.scss */
+.tout-list li:last-child {
+  margin-right: 0px;
+}
+/* line 1780, sass/partials/_homepage.scss */
+.tout-list li p {
+  text-align: justify;
+  margin-top: 20px;
+  padding: 0 5px;
+}
+/* line 1785, sass/partials/_homepage.scss */
+.tout-list li img {
+  width: 100%;
+  height: 200px;
+}
+
+/* line 1792, sass/partials/_homepage.scss */
+.columns-container {
+  margin: 0 auto;
+  width: 1280px;
+}
+/* line 1795, sass/partials/_homepage.scss */
+.columns-container .columns-container-inner {
+  clear: both;
+}
+/* line 1797, sass/partials/_homepage.scss */
+.columns-container .columns-container-inner .columns-column {
+  width: 400px;
+  float: left;
+  margin: 0 0 0 30px;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+}
+/* line 1803, sass/partials/_homepage.scss */
+.columns-container .columns-container-inner .columns-column:first-child {
+  margin: 0;
+}
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* line 1792, sass/partials/_homepage.scss */
+  .columns-container {
+    width: 960px;
+  }
+  /* line 1811, sass/partials/_homepage.scss */
+  .columns-container .columns-container-inner .columns-column {
+    width: 293px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  /* line 1792, sass/partials/_homepage.scss */
+  .columns-container {
+    width: 720px;
+  }
+  /* line 1819, sass/partials/_homepage.scss */
+  .columns-container .columns-container-inner .columns-column {
+    width: 213px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 719px) {
+  /* line 1792, sass/partials/_homepage.scss */
+  .columns-container {
+    width: 480px;
+  }
+  /* line 1827, sass/partials/_homepage.scss */
+  .columns-container .columns-container-inner .columns-column {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  /* line 1830, sass/partials/_homepage.scss */
+  .columns-container .columns-container-inner .columns-column:first-child {
+    margin: 0 auto 20px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  /* line 1792, sass/partials/_homepage.scss */
+  .columns-container {
+    width: 320px;
+  }
+  /* line 1839, sass/partials/_homepage.scss */
+  .columns-container .columns-container-inner .columns-column {
+    width: 300px;
+    float: none;
+    margin: 0 auto 20px;
+  }
+  /* line 1843, sass/partials/_homepage.scss */
+  .columns-container .columns-container-inner .columns-column:first-child {
+    margin: 0 auto 20px;
+  }
+}
+
+/* line 1852, sass/partials/_homepage.scss */
+.tout-image .tout-image-inner {
+  padding: 0 24px;
+}
+/* line 1855, sass/partials/_homepage.scss */
+.tout-image img {
+  width: 100%;
+}
+
+/* line 1861, sass/partials/_homepage.scss */
+.tout-content .tout-content-inner {
+  padding: 24px 24px;
+}
+/* line 1863, sass/partials/_homepage.scss */
+.tout-content .tout-content-inner .tout-title {
+  font-size: 24px;
+  margin: 0 0 0.5em;
+}
+/* line 1867, sass/partials/_homepage.scss */
+.tout-content .tout-content-inner .tout-description {
+  font-size: 14px;
+}
+
+/* line 1873, sass/partials/_homepage.scss */
+.footerZone {
+  height: 70px;
+  background: #9c1d14;
+}
+
+/* 960 specific */
+/* 720 specific */
+/* 480 - Landscape Mobile - Specific */
+/* 320 - Portrait Mobile - Specific */
+/* line 247, sass/main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

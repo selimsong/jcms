@@ -1,0 +1,102 @@
+<?php
+
+/**
+ * Implements of hook_schema().
+ */
+function ip_whitelist_schema() {
+  $schema = array();
+
+  $schema['ip_whitelist_group'] = array(
+    'description' => 'The base table for IP groups.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'The name of the group.',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      // 'paths' => array(
+      //   'description' => 'List of paths that can be accessed.',
+      //   'type' => 'text',
+      //   'not null' => TRUE,
+      //   'default' => '',
+      // ),
+    ),
+    'primary key' => array('id'),
+  );
+  $schema['ip_whitelist_pattern'] = array(
+    'description' => 'The base table for IP patterns.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'The name of the pattern.',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'first' => array(
+        'description' => 'The pattern to match.',
+        'type' => 'varchar',
+        'length' => 15,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'last' => array(
+        'description' => 'The pattern to match.',
+        'type' => 'varchar',
+        'length' => 15,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'pattern' => array(
+        'description' => 'The pattern to match.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'active' => array(
+        'description' => 'Boolean indicating whether the pattern should be enforced.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 1,
+      ),
+      'gid' => array(
+        'description' => 'The group ID this record is associated with.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function ip_whitelist_install() {
+  // Populate the default {node_access} record.
+  db_insert('ip_whitelist_group')->fields(array(
+    'name' => 'Qualcomm',
+  ))->execute();
+  db_insert('ip_whitelist_group')->fields(array(
+    'name' => 'Digitaria',
+  ))->execute();
+}

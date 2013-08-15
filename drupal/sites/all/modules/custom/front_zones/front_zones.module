@@ -1,0 +1,276 @@
+<?php 
+
+
+/**
+ * Implements hook_init
+ */
+function front_zones_init() {
+  $server_environment = variable_get('serverEnvironment', '');
+  drupal_add_js(array("serverEnvironment" => $server_environment), 'setting');
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function front_zones_menu() {  
+  $items['front'] = array(
+    'title' => 'Snapdragon China',
+    'page callback' => 'front_zones_custom_front_page',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  
+  $items['admin/config/zones'] = array(
+     'title' => 'Home Page Zones',
+     'page callback' => 'drupal_get_form',
+     'page arguments' => array('snapdragon_zones_video'),
+     'access arguments' => array('administer site configuration'),
+     'type' => MENU_NORMAL_ITEM,
+     'file' => 'front_zones.admin.inc' ,
+     'file path' => drupal_get_path('module', 'front_zones'),
+   );
+   
+   $items['admin/config/zones/devices'] = array(
+     'title' => 'Feature Devices',
+     'page callback' => 'drupal_get_form',
+     'page arguments' => array('snapdragon_zones_devices'),
+     'access arguments' => array('administer site configuration'),
+     'type' => MENU_LOCAL_TASK,
+     'file' => 'front_zones.admin.inc' ,
+     'file path' => drupal_get_path('module', 'front_zones'),
+     'weight' => -2,
+   ); 
+   
+   
+  $items['admin/config/zones/video'] = array(
+     'title' => 'Video',
+     'page callback' => 'drupal_get_form',
+     'page arguments' => array('snapdragon_zones_video'),
+     'access arguments' => array('administer site configuration'),
+     'type' => MENU_LOCAL_TASK,
+     'file' => 'front_zones.admin.inc' ,
+     'file path' => drupal_get_path('module', 'front_zones'),
+     'weight' => 0,
+   );
+  
+  $items['admin/config/zones/social'] = array(
+    'title' => 'Social Media',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('snapdragon_zones_social'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'front_zones.admin.inc' ,
+    'file path' => drupal_get_path('module', 'front_zones'),
+    'weight' => 2,
+  );
+  
+  $items['admin/config/zones/touts'] = array(
+    'title' => 'Touts',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('snapdragon_zones_touts'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'front_zones.admin.inc' ,
+    'file path' => drupal_get_path('module', 'front_zones'),
+    'weight' => 4,
+  );
+  
+  $items['admin/config/zones/footer'] = array(
+    'title' => 'Footer',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('snapdragon_zones_footer'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'front_zones.admin.inc' ,
+    'file path' => drupal_get_path('module', 'front_zones'),
+    'weight' => 6,
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_block_view().
+ */
+function front_zones_block_view($delta='') {
+  
+  $block = array();
+  switch ($delta) {
+  
+    
+    case 'zone_video':
+      $block['content'] = theme('zone_video');
+      break;
+    
+    case 'zone_social':
+      $block['content'] = theme('zone_social');
+      break;
+    
+    case 'zone_touts':
+      $block['content'] = theme('zone_touts');
+      break;
+    
+    case 'zone_nav':
+      $block['content'] = theme('zone_nav');
+      break;
+    
+    case 'zone_footer':
+      $block['content'] = theme('zone_footer');
+      break;
+
+    case 'zone_processors':
+      $block['content'] = theme('zone_processors');
+      break;
+  }
+  return $block;
+}
+
+/**
+ * Implementation of hook_block_info().
+ */
+function front_zones_block_info() {
+  $blocks['zone_intro'] = array(
+    'info' => t('Main intro description'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  $blocks['zone_video'] = array(
+    'info' => t('Brightcove video embed code '),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  
+  $blocks['zone_social'] = array(
+    'info' => t('Social Media Info '),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  
+  $blocks['zone_touts'] = array(
+    'info' => t('Touts'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  
+  $blocks['zone_footer'] = array(
+     'info' => t('Footer'),
+     'cache' => DRUPAL_CACHE_GLOBAL,
+   );
+   
+  $blocks['zone_nav'] = array(
+      'info' => t('Homepage Nav'),
+      'cache' => DRUPAL_CACHE_GLOBAL,
+    ); 
+
+  $blocks['zone_processors'] = array(
+      'info' => t('Proscessors'),
+      'cache' => DRUPAL_CACHE_GLOBAL,
+    ); 
+   
+  return $blocks;
+}
+
+
+// homepage
+function front_zones_custom_front_page() {
+  return '';
+}
+
+
+/**
+ * Implementation of hook_theme().
+ */
+function front_zones_theme($existing, $type, $theme, $path) {
+  
+  return array(
+   
+    'zone_video' => array(
+      'template' => 'zone_video',
+      'path' => drupal_get_path('module', 'front_zones').'/templates'
+    ),
+    'zone_social' => array(
+      'template' => 'zone_social',
+      'path' => drupal_get_path('module', 'front_zones').'/templates'
+    ),
+    'zone_touts' => array(
+      'template' => 'zone_touts',
+      'path' => drupal_get_path('module', 'front_zones').'/templates'
+    ),
+    'zone_footer' => array(
+      'template' => 'zone_footer',
+      'path' => drupal_get_path('module', 'front_zones').'/templates'
+    ),
+    'zone_nav' => array(
+      'template' => 'zone_nav',
+      'path' => drupal_get_path('module', 'front_zones').'/templates'
+    ),
+    'zone_processors' => array(
+      'template' => 'zone_processors',
+      'path' => drupal_get_path('module', 'front_zones').'/templates'
+    ),
+    
+    'intro_content_img' => array(
+      'variables' => array('img_data' => array()),
+      'template' => 'intro_content_img',
+      'path' => drupal_get_path('module', 'front_zones').'/templates',
+      
+    ),
+
+    'intro_content_video' => array(
+      'variables' => array('vid_data' => array()),
+      'template' => 'intro_content_video',
+      'path' => drupal_get_path('module', 'front_zones').'/templates',
+    ),
+  );
+}
+
+
+function front_zones_preprocess_zone_social(&$vars) {
+  $vars['social_data'] = variable_get('snapdragon_socials');
+}
+
+function front_zones_preprocess_zone_processors(&$vars) {
+
+  $vars['processors'] = variable_get('snapdragon_processors');
+  $vars['spec_categories'] = variable_get('snapdragon_processors_spec_categories');
+  $vars['processor_info'] = variable_get('processor_info');
+
+  foreach ($vars['processors'] as $p => $processor) {
+    if (!empty($processor['badge_image'])) {
+      $file = file_load($processor['badge_image']);
+      if (!empty($file)) {
+        $vars['processors'][$p]['image_url'] = file_create_url($file->uri);
+      }
+    }
+  }
+}
+
+function front_zones_preprocess_zone_touts(&$vars){
+  for ($i=1; $i<4; $i++){
+    $vars['tout'][$i]['title'] = variable_get('zone_tout_' . $i . '_title');
+    $vars['tout'][$i]['body'] = variable_get('zone_tout_' . $i . '_body');
+    $vars['tout'][$i]['img_alt'] = variable_get('zone_tout_' . $i . '_img_alt');
+    
+    $img = file_load(variable_get('zone_tout_' . $i . '_img'));
+    $vars['tout'][$i]['img'] = '<img src="'.image_style_url('tout_image', $img->uri).'" alt="'.$vars['tout'][$i]['img_alt'].'" title="'.$vars['tout'][$i]['img_alt'].'" />';
+    
+    // processing tout 3 links
+    for($j=1; $j<4; $j++){
+      $link = variable_get('zone_tout_'.$i.'_link_'.$j);
+      $link_text = variable_get('zone_tout_'.$i.'_link_text_'.$j);
+      
+      if(!empty($link) && !empty($link_text)){
+        $vars['tout'][$i]['links'][$j] = l($link_text, $link);
+      }
+    }
+  }
+}
+
+/**
+* Implementation of hook form_alter
+**/
+
+function front_zones_form_alter(&$form, &$form_state, $form_id){
+  if($form_id == 'slide_node_form') {
+    //removing N/A from radio
+    unset($form['field_slide_img_or_video']['und']['#options']['_none']);
+    unset($form['field_slide_content_pos']['und']['#options']['_none']);
+    unset($form['field_slide_text_color']['und']['#options']['_none']);
+  }
+}

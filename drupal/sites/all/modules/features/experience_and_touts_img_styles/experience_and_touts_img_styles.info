@@ -1,0 +1,9 @@
+name = experience and touts img styles
+core = 7.x
+package = Features
+version = 7.x-1.0-20130529
+project = experience_and_touts_img_styles
+dependencies[] = image
+features[features_api][] = api:1
+features[image][] = experience_slide_image
+features[image][] = tout_image

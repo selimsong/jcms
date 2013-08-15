@@ -1,0 +1,109 @@
+<?php
+
+/**
+ * @file
+ * Module that restricts access to specified paths based on IP.
+ */
+
+/**
+ * Implementation of hook_menu().
+ */
+function ip_whitelist_menu() {
+  $items['admin/config/ip-whitelist'] = array(
+    'description' => 'Configure what block content appears in your site\'s sidebars and other regions.',
+    'page callback' => 'ip_whitelist_config_form',
+    'access arguments' => array('administer ip whitelist'),
+    'file' => 'ip_whitelist.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['ip-whitelist/add/%'] = array(
+    'title' => 'IP Whitelist',
+    'description' => 'Adds an IP address to the whitelist.',
+    'access callback' => 'digi_util_signed_access',
+    'page callback' => 'ip_whitelist_api_add',
+    'page arguments' => array(2),
+    'file' => 'ip_whitelist.service.inc',
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_init().
+ */
+function ip_whitelist_init() {
+  // Don't check IP if run from command line.
+  if (drupal_is_cli()) {
+    return;
+  }
+
+  // Don't check IP for wwws.
+  if ($_SERVER['HTTP_HOST'] == 'wwws.qualcomm.com') {
+    return;
+  }
+
+  // Don't check IP for Facebook pages.
+  if (arg(0) == 'fb') {
+    return;
+  }
+
+  // Don't check IP if we are adding a new IP to the list via drush.
+  if (arg(0) == 'ip-whitelist' && arg(1) == 'add') {
+    return;
+  }
+
+  // TODO: Check arg(0) == 'user' ?
+  if (!isset($_SERVER['HTTP_Q0MM007_TRUE_CLIENT_IP']) && !ip_whitelist_verify(ip_address())) {
+    // drupal_not_found();
+    $protocol = (isset($_SERVER['SERVER_PROTOCOL']) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0');
+    header($protocol . ' 404 Not Found');
+    drupal_exit();
+  }
+}
+
+/**
+ * Returns TRUE if the given IP address is allowed.
+ */
+function ip_whitelist_verify($ip) {
+  $ips = variable_get('ip_whitelist', array());
+  if (empty($ips)) {
+    $ips = db_select('ip_whitelist_pattern', 'p')
+            ->fields('p', array('pattern'))
+            ->condition('active', 1)
+            ->execute()
+            ->fetchCol();
+    // Since the list is needed on every request, we store it as a variable
+    // because all variables are loaded at once on every request.
+    variable_set('ip_whitelist', $ips);
+  }
+
+  $ips[] = '^127\.0\.0\.1$';
+  $matches = array();
+  foreach ($ips as $pattern) {
+    if (!empty($pattern) && preg_match('/' . $pattern . '/', $ip, $matches)) {
+      return TRUE;
+    }
+  }
+  return FALSE;
+}
+
+function ip_whitelist_save($name, $ip) {
+  $data = array(
+    'name' => $name,
+    'first' => $ip,
+    'pattern' => '^' . str_replace('.', '\.', $ip) . '$',
+    'active' => TRUE,
+    'gid' => 2,
+  );
+  $pattern = new IPPattern($data);
+  $existing = $pattern->search($name, 1, 'id');
+  if (!empty($existing)) {
+    $pattern->id = key($existing);
+  }
+
+  if ($pattern->validate_ip($ip)) {
+    return $pattern->save();
+  }
+
+  return FALSE;
+}

@@ -1,0 +1,141 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function digi_util_menu() {
+  $items = array();
+  $items['bam-download/%'] = array(
+    'title' => 'Backup download',
+    'access callback' => 'digi_util_signed_access',
+    'page callback' => 'digi_util_bam_download',
+    'page arguments' => array(1),
+    'file' => 'digi_util.service.inc',
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Takes SimpleXML Object and converts it to an array recursively
+ */
+function digi_util_simplexml_to_array($arrObjData, $arrSkipIndices = array()) {
+  $arrData = array();
+
+  // if input is object, convert into array
+  if (is_object($arrObjData)) {
+    $arrObjData = get_object_vars($arrObjData);
+  }
+
+  if (is_array($arrObjData)) {
+    foreach ($arrObjData as $index => $value) {
+      if (is_object($value) || is_array($value)) {
+        if (is_object($value) && get_class($value) == 'SimpleXMLElement') {
+          $value_array = (array)$value;
+          if (empty($value_array)) {
+            $arrData[$index] = (string)$value;
+            continue;
+          }
+        }
+        $value = digi_util_simplexml_to_array($value, $arrSkipIndices); // recursive call
+      }
+      if (in_array($index, $arrSkipIndices)) {
+        continue;
+      }
+      $arrData[$index] = $value;
+    }
+  }
+  return $arrData;
+}
+
+/**
+ * Implementation of hook_form_alter
+ */
+function digi_util_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id == 'field_ui_field_settings_form'){
+    $form['field']['settings']['allowed_values_function'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Allowed value function'),
+      );
+  }
+}
+
+/**
+ * Adds timestamp, random string, and signature to an array of params.
+ */
+function digi_util_signed_http_params($data) {
+  $values = array_merge(range(65, 90), range(97, 122), range(48, 57));
+  $nonce = chr(mt_rand(97, 122));
+  for ($i = 1; $i < 32; $i++) {
+    $nonce .= chr($values[mt_rand(0, count($values) - 1)]);
+  }
+
+  $time = time();
+  $params = $data + array(
+    'time' => $time,
+    'nonce' => $nonce,
+    'signature' => digi_util_generate_signature($data, $time, $nonce),
+  );
+  return $params;
+}
+
+/**
+ * Makes a signed HTTP request to a URL.
+ *
+ * @param string $url
+ *   The URL to which the request will be sent.
+ * @param array $data
+ *   An array of parameters that will be appended to the URL as query string parameters.
+ */
+function digi_util_signed_http_request($url, $data) {
+  $url = digi_util_signed_url($url, $data);
+  return drupal_http_request($url);
+}
+
+/**
+ * Generates a signed URL.
+ *
+ * @param string $url
+ *   The URL to which the request will be sent.
+ * @param array $data
+ *   An array of parameters that will be appended to the URL as query string parameters.
+ */
+function digi_util_signed_url($url, $data = array()) {
+  $parsed = parse_url($url);
+  $data['q'] = substr($parsed['path'], 1);
+  $params = digi_util_signed_http_params($data);
+  unset($params['q']);
+  return url($url, array('query' => $params));
+}
+
+/**
+ * Generates an HMAC signature.
+ */
+function digi_util_generate_signature($data, $time, $nonce) {
+  return hash_hmac('sha512', $time . implode(':', $data) . $nonce, drupal_get_private_key());
+}
+
+/**
+ * Validates a signed request.
+ */
+function digi_util_validate_signature($params) {
+  $time = $params['time'];
+
+  $current = time();
+  if ($current < $time || $current - $time > 5) {
+    return FALSE;
+  }
+  $nonce = $params['nonce'];
+  $signature = $params['signature'];
+  unset($params['time']);
+  unset($params['nonce']);
+  unset($params['signature']);
+  return digi_util_generate_signature($params, $time, $nonce) == $signature;
+}
+
+/**
+ * Returns TRUE if the signed $_GET request is valid.
+ */
+function digi_util_signed_access() {
+  return digi_util_validate_signature($_GET);
+}

@@ -1,0 +1,784 @@
+/**********************************************************************************
+ *  Featured Device Zone
+ **********************************************************************************/
+
+.deviceZone {
+  background-color: #232326;
+  color: #fff;
+  position: relative;
+  height: 100%;
+  padding: 61px 0 0;
+  margin: 0;
+  width: 100%;
+  @include breakpoint(desktop-960) {
+    padding: 10px 0 0;
+    border: 0;
+  }
+  @include breakpoint(tablet) {
+    padding: 20px 0 0;
+    border: 0;
+  }
+  @include breakpoint(mobile-l) {
+    border-bottom: 1px solid black;
+    padding: 0;
+  }
+  @include breakpoint(mobile-p) {
+    border-bottom: 1px solid black;
+    padding: 0;
+  }
+}
+.deviceZone-box {
+  @extend .zone-box;
+  padding: 0;
+  @include breakpoint(desktop-960) {
+    width: 960px;
+  }
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+  @include breakpoint(mobile-l) {
+    width: 100%;
+    height: 100%;
+  }
+  @include breakpoint(mobile-p) {
+    width: 100%;
+    height: 100%;
+  }
+}
+.deviceZone-inner {
+  width: 1200px;
+  //height: 667px; // 660px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #232326;
+  padding: 0;
+
+  @include breakpoint(desktop-960) {
+    width: 960px;
+  }
+  @include breakpoint(tablet) {
+    width: 100%;
+    //height: 785px;
+    height: auto;
+  }
+  @include breakpoint(mobile-l) {
+    width: 100%;
+    height: auto;
+    padding: 20px 0 0;
+  }
+  @include breakpoint(mobile-p) {
+    width: 100%;
+    height: auto;
+    padding: 20px 0 0;
+  }
+}
+
+.featured-device-tout {
+  position: absolute;
+  width: 1200px;
+  height: 535px;
+  text-align:center;
+  z-index: 21;
+  background-color: #232326;
+  overflow: hidden;
+  .featured-device-tout-inner {
+    width: 100%;
+  }
+  .featured-device-image {
+    //float: right;
+    width: 672px;
+    height: 535px;
+    padding: 0;
+    .device-image {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .featured-device-content {
+    float: left;
+    width: 500px;
+  }
+  .featured-device-content-inner {
+    //display: inline-block;
+    .block {
+      //height: 200px;
+      //width: 200px;
+      padding: 0;
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em; // Adjusts for spacing
+        //For visualization
+        //background: #808080; width: 5px;
+      }
+      .lt-ie8 & {
+        //padding-top: 45%;
+      }
+      .centered {
+        display: inline-block;
+        vertical-align: middle;
+        width: 98%;
+        .featured-device-main-header {
+          h2 {
+            margin: 0;
+            font-size: 45px;
+            line-height: 50px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop-960) {
+    width: 960px;
+    padding-top: 50px;
+    margin: 0;
+    .lt-ie8 & {
+      height: 485px;
+    }
+    .featured-device-image {
+      width: 537px;
+      height: 428px;
+    }
+    .featured-device-content {
+      width: 400px;
+      float: left;
+    }
+    .featured-device-content-inner {
+      .block {
+        .centered {
+          .featured-device-main-header {
+            h2 {
+              font-size: 40px;
+              line-height: 45px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    position: relative;
+    .featured-device-content {
+      float: none;
+      width: 600px;
+    }
+    .featured-device-tout-inner {
+      width: 600px;
+      margin: 0 auto;
+    }
+    .featured-device-image {
+      float: none;
+      height: 446px;
+      margin: 0 auto;
+      width: 560px;
+    }
+    .featured-device-content-inner {
+      .block {
+        .centered {
+          .featured-device-main-header {
+            h2 {
+              font-size: 32px;
+              line-height: 45px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-l) {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    .featured-device-content {
+      float: none;
+      width: 100%;
+      padding: 0 20px;
+    }
+    .featured-device-tout-inner {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .featured-device-image {
+      float: none;
+      width: 320px;
+      height: auto;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .featured-device-content-inner {
+      .block {
+        .centered {
+          .featured-device-main-header {
+            h2 {
+              font-size: 22px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-p) {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: left;
+    .featured-device-content {
+      float: none;
+      width: 100%;
+      padding: 0 20px;
+    }
+    .featured-device-tout-inner {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .featured-device-image {
+      float: none;
+      width: 320px;
+      height: auto;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .featured-device-content-inner {
+      .block {
+        .centered {
+          .featured-device-main-header {
+            h2 {
+              font-size: 22px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-container {
+  width: 1200px;
+  height: 535px;
+  //max-height: 527px;
+  position: relative;
+  margin: 0 auto;
+  .modal-detail {
+    background: #232326 url(../images/modal-detail-bkgd.jpg) no-repeat left top; //-38px;
+    width: 1200px;
+    height: 527px;
+    position: absolute;
+    top:0;
+    left: 0;
+    //display: none;
+    @include opacity(0);
+    //z-index: 4;
+    transition: opacity 300ms ease;
+    -webkit-transition: opacity 300ms ease;
+    &.active {
+      z-index: 23;
+      @include opacity(1.0);
+      transition: opacity 300ms ease;
+      -webkit-transition: opacity 300ms ease;
+    }
+    .device-main-image {
+      float: left;
+      width: 58.333333%;
+      max-width: 700px;
+      height: 100%;
+      //width: 700px;
+      .main-image-inner {
+        padding: 100px 30px 0;
+        text-align: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .device-main-content {
+      float: left;
+      display: inline-block;
+      width: 407px;
+      //width: 41%;
+      margin-top: 100px;
+      padding: 0;
+      .heading-block {
+        margin-bottom: 50px;
+        .content-title {
+          h2 {
+            font-size: 36px !important;
+            font-weight: normal !important;
+            margin: 0 !important;
+          }
+        }
+        .content-subhead {
+          font-size: 18px !important;
+        }
+      }
+      .content-body {
+        font-size: 14px;
+        color: #767676;
+        line-height: 24px;
+      }
+    }
+    .close-btn {
+      @extend %closeButton;
+      /*position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      a {
+        background: #000 url(../images/device-close-btn.png) no-repeat left top;
+        display: inline-block;
+        outline: 0;
+        text-decoration: none;
+        width: 36px;
+        height: 36px;
+      }*/
+    }
+  }
+  @include breakpoint(desktop-960) {
+    width: 960px;
+    .modal-detail {
+      width: 960px;
+      .device-main-image {
+        .main-image-inner {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .device-main-content {
+        width: 324px;
+        padding: 0;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    width: 100%;
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .modal-detail {
+      width: 100%;
+      background: #232326 url(../images/modal-detail-bkgd.jpg) no-repeat left -38px; //-38px;
+      .device-main-image {
+        .main-image-inner {
+          padding-top: 70px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .device-main-content {
+        margin-top: 70px;
+        padding: 0 20px 0 0;
+        width: 41%;
+      }
+    }
+  }
+  @include breakpoint(mobile-l) {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    .modal-detail {
+      width: 100%;
+      background-color: #232326;
+      background-image: none;
+      height: auto;
+      .device-main-image {
+        float: none;
+        height: 100%;
+        width: 320px;
+        background-color: #232326;
+        margin: 0 auto;
+        .main-image-inner {
+          padding: 43px 10px 0;
+          height: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .device-main-content {
+        background-color: #232326;
+        border-bottom: 1px solid #FFFFFF;
+        float: none;
+        margin: 0;
+        max-width: 100%;
+        padding: 10px 10px 20px;
+        width: 100%;
+        .heading-block {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-p) {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    .modal-detail {
+      width: 100%;
+      background-color: #232326; //-38px;
+      background-image: none;
+      height: auto;
+      .device-main-image {
+        float: none;
+        height: 100%;
+        width: 320px;
+        background-color: #232326;
+        margin: 0 auto;
+        .main-image-inner {
+          padding: 43px 10px 0;
+          height: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .device-main-content {
+        background-color: #232326;
+        border-bottom: 1px solid #FFFFFF;
+        float: none;
+        margin: 0;
+        max-width: 100%;
+        padding: 10px 10px 20px;
+        width: 100%;
+        .heading-block {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.device-link-container {
+  margin-top: 40px;
+  .device-link {
+    margin: 0 20px 20px 0;
+    min-width: 183px;
+    float: left;
+    .device-link-content {
+      text-align: center;
+      -webkit-border-radius: 7px;
+      border-radius: 7px;
+      height: 37px;
+      background: #000;
+      a {
+        display: inline-block;
+        font-size: 14px;
+        line-height:24px;
+        background: url(../images/device-link-arrow.png) no-repeat right top;
+        padding: 8px 32px 8px 10px;
+        min-width: 183px;
+        width: 100%;
+        color: #fff;
+        text-decoration: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        &:hover, &:visited {
+          color: #fff;
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop-960) {
+    .device-link {
+      margin: 0 15px 15px 0;
+    }
+  }
+  @include breakpoint(tablet) {
+    margin-top: 15px;
+    .device-link {
+      margin: 0 10px 10px 0;
+    }
+  }
+  @include breakpoint(mobile-l) {
+
+    .device-link {
+      margin: 0 10px 10px 0;
+    }
+  }
+  @include breakpoint(mobile-p) {
+    margin-top: 10px;
+    .device-link {
+      float: none;
+      max-width: 200px;
+      margin: 0 5px 5px 0;
+    }
+  }
+}
+
+.node-container {
+  width: 100%;
+  //height: 132px;
+  margin: 0;
+
+  .marker-bar-rail {
+    height: 8px;
+    //margin-top: -8px;
+    //top: -10px;
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .marker-bar-container {
+      background: url(../images/node-tab-marker-sprite.png) no-repeat 0 0;
+      width: 29px;
+      height: 8px;
+      position: absolute;
+      left: -29px;
+      &.pos-tab-0 {
+        left: 136px;
+      }
+      &.pos-tab-1 {
+        left: 436px;
+      }
+      &.pos-tab-2 {
+        left: 736px;
+      }
+      &.pos-tab-3 {
+        left: 1036px;
+      }
+    }
+  }
+
+  .node-tab {
+    //background: url(../images/node-tab-bkgd.jpg) no-repeat left top;
+    //background-size: cover;
+    background-color: #1b1b1e;
+    width: 300px; // % maybe?
+    height: 124px;
+    display: inline-block;
+    cursor: pointer;
+    position:relative;
+    float: left;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    .lt-ie8 & {
+      zoom: 1;
+    }
+    &:hover .node-hover-bkgd {
+      @include opacity(1.0);
+      transition: opacity 300ms ease;
+      -webkit-transition: opacity 300ms ease;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    .color-bar {
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .node-hover-bkgd {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(../images/node-hover-state.jpg) no-repeat;
+      background-size: cover;
+      @include opacity(0.3);
+      transition: opacity 300ms ease;
+      -webkit-transition: opacity 300ms ease;
+    }
+    .device-container {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      .device-title {
+        float: left;
+        height: 100%;
+        padding-top: 5px;
+        width: 41%;
+      }
+      .device-thumb {
+        float: right;
+        height: 124px;
+        padding: 11px 0 0 0;
+        text-align: center;
+        width: 58.3333333333%;
+      }
+    }
+    @include breakpoint(desktop-960) {
+      width: 25%;
+    }
+    @include breakpoint(tablet) {
+      width: 50%;
+    }
+    @include breakpoint(mobile-l) {
+      width: 100%;
+      .device-title {
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+    @include breakpoint(mobile-p) {
+      width: 100%;
+
+    }
+  }
+  @include breakpoint(desktop-960) {
+
+  }
+  @include breakpoint(tablet) {
+    height: auto;
+    //margin-top: 8px;
+    .marker-bar-rail {
+      display: none;
+    }
+  }
+  @include breakpoint(mobile-l) {
+    position: relative;
+    //top: 330px;
+    height: 496px;
+    .marker-bar-rail {
+      display: none;
+    }
+  }
+  @include breakpoint(mobile-p) {
+    position: relative;
+    //top: 330px;
+    height: 496px;
+    .marker-bar-rail {
+      display: none;
+    }
+  }
+}
+
+.device-title-inner {
+  //padding-top: 50px;
+  .block {
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em; // Adjusts for spacing
+    }
+  }
+  .centered {
+    display: inline-block;
+    vertical-align: middle;
+    width: 96%;
+    .lt-ie8 & {
+      padding-top: 30%;
+    }
+    h3 {
+      margin: 0 !important;
+      padding-left: 20px;
+      font-weight: normal !important;
+      font-size: 16px !important;
+    }
+  }
+  @include breakpoint(desktop-960) {
+    .centered {
+      width: 95%;
+      .lt-ie8 & {
+        padding-top: 30%;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    .centered {
+      .lt-ie8 & {
+        padding-top: 30%;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+  @include breakpoint(mobile-l) {
+    .centered {
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+  @include breakpoint(mobile-p) {
+
+  }
+}
+
+
+.tab-0 {
+  //border-top: 5px solid #00beb6 !important;
+  cursor: pointer;
+  .marker-bar {
+    &.active {
+      background-position: 50% 0px;
+    }
+  }
+  .color-bar {
+    background: $cyan;
+  }
+}
+
+.tab-1 {
+  //border-top: 5px solid #fed94f !important;
+  cursor: pointer;
+  .marker-bar {
+    &.active {
+      background-position: 50% -14px;
+    }
+  }
+  .color-bar {
+    background-color: $yellow;
+  }
+}
+.modal-detail {
+  left: -300px;
+}
+
+.tab-2 {
+  //border-top: 5px solid #ee3124 !important;
+  cursor: pointer;
+  .marker-bar {
+    &.active {
+      background-position: 50% -28px;
+    }
+  }
+  .color-bar {
+    background: $red;
+  }
+}
+.modal-detail {
+  left: -600px;
+}
+
+.tab-3 {
+  //border-top: 5px solid #ee3124 !important;
+  cursor: pointer;
+  .marker-bar {
+    &.active {
+      background-position: 50% -42px;
+    }
+  }
+  .color-bar {
+    background: #3c3f41;
+  }
+}
+.modal-detail {
+  left: -600px;
+}
+
+
+

@@ -1,0 +1,411 @@
+/**********************************************************************************
+ *  Social Zone
+ **********************************************************************************/
+
+.socialZone-box {
+  @extend .zone-box;
+  //background: url(../images/ps_neutral.png);
+  padding: 75px 0px;
+  .social-inner {
+    margin: 0 auto;
+    height: 100%;
+  }
+  @include breakpoint(desktop-960) {
+    width: 960px;
+  }
+  @include breakpoint(tablet) {
+    width: $breakpoint-tablet;
+  }
+  @include breakpoint(mobile-l) {
+    //width: $breakpoint-mobile-landscape - 80;
+    width: 100%;
+    padding: 40px 0px;
+  }
+  @include breakpoint(mobile-p) {
+    width: $breakpoint-mobile-portrait;
+    padding: 40px 0px;
+  }
+}
+
+.social-content-container {
+  float: right;
+  //margin-left: 790px;
+  width: 510px;
+  .social-content {
+    padding: 163px 0 0;
+    h2 {
+      font-size: 45px;
+    }
+  }
+  @include breakpoint(desktop-960) {
+    //margin-left: 570px;
+    width: 390px;
+    .social-content {
+      padding: 100px 0 0;
+    }
+  }
+  @include breakpoint(tablet) {
+    margin: 0;
+    width: 720px;
+    .social-content {
+      padding: 0;
+      text-align: center;
+    }
+  }
+  @include breakpoint(mobile-l) {
+    margin: 0 auto 30px;
+    width: 100%;
+    padding: 0 20px;
+    float: none;
+    .social-content {
+      text-align: center;
+      padding: 0;
+      h2 {
+        font-size: 24px;
+        font-weight: normal;
+      }
+    }
+  }
+  @include breakpoint(mobile-p) {
+    margin: 0 auto 30px;
+    width: 280px;
+    float: none;
+    .social-content {
+      padding: 0;
+      text-align: left;
+      h2 {
+        font-size: 24px;
+        font-weight: normal;
+      }
+    }
+    .social-content {
+      padding: 0;
+    }
+  }
+}
+
+.social-balloons-container {
+  //background: url(../images/socialballoons-desktop.png) no-repeat transparent;
+  //background-position: 0px 0px;
+  position: relative;
+  float: left;
+  width: 767px;
+  height: 629px;
+  display: inline-block;
+  margin: 0;
+  .balloons-bg {
+    display: block;
+    //left: 42px;
+    position: absolute;
+    //top: 68px;
+    top: 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .balloon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    text-align: center;
+    //outline: 1px solid;
+    //& > div {
+    //  display: inline-block;
+    //}
+    .cta-link-container {
+      margin: 35px 0 0;
+      .lt-ie8 & {
+        margin-left: 30px;
+      }
+    }
+    .lt-ie8 & .cta-link {
+      display: table;
+      float: left;
+    }
+    &.youku-balloon {
+      background: none;
+      height: 192px;
+      left: 44px;
+      top: 69px;
+      width: 326px;
+      .youku-logo {
+        margin:35px 0 0;
+        img {
+          //width: 100%;
+        }
+      }
+    }
+    &.weibo-balloon {
+      background: none;
+      height: 227px;
+      left: 390px;
+      top: 172px;
+      width: 326px;
+      .weibo-logo {
+        margin:40px 0 0;
+        img {
+          //width: 100%;
+        }
+      }
+    }
+    &.qq-balloon {
+      background: none;
+      height: 210px;
+      left: 106px;
+      top: 286px;
+      width: 321px;
+      .qq-logo {
+        margin:50px 0 0;
+        img {
+          //width: 100%;
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop-960) {
+    width: 566px;
+    height: 464px;
+    .balloon {
+      .cta-link-container {
+        margin: 17px 0 0;
+        .lt-ie8 & {
+          margin-left: 30px;
+        }
+      }
+      &.youku-balloon {
+        height: 142px;
+        left: 33px;
+        top: 51px;
+        width: 241px;
+        .youku-logo {
+          width: 75%;
+          margin:25px auto 0;
+          img { width: 100%; }
+        }
+      }
+      &.weibo-balloon {
+        height: 166px;
+        left: 288px;
+        top: 128px;
+        width: 240px;
+        .weibo-logo {
+          width: 75%;
+          margin:28px auto 0;
+          img { width: 100%; }
+        }
+      }
+      &.qq-balloon {
+        height: 155px;
+        left: 78px;
+        top: 211px;
+        width: 237px;
+        .qq-logo {
+          width: 75%;
+          margin:35px auto 0;
+          img { width: 100%; }
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    float: none;
+    margin: 0 auto;
+    width: 720px;
+    height: 590px;
+    .balloon {
+      &.youku-balloon {
+        height: 180px;
+        left: 41px;
+        top: 64px;
+        width: 306px;
+        .youku-logo {
+          width: 95%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .cta-link-container {
+          margin: 30px 0 0;
+        }
+      }
+      &.weibo-balloon {
+        height: 214px;
+        left: 366px;
+        top: 161px;
+        width: 307px;
+        .weibo-logo {
+          margin:32px auto 0;
+          width: 95%;
+        }
+      }
+      &.qq-balloon {
+        height: 198px;
+        left: 99px;
+        top: 268px;
+        width: 302px;
+        .qq-logo {
+          width: 95%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-l) {
+    background: none;
+    float: none;
+    width: 280px;
+    height: 690px;
+    display: block;
+    margin: 0 auto;
+    .balloons-bg {
+      display:none;
+    }
+    .balloon {
+      position: relative;
+      &.youku-balloon {
+        background: url(../images/youku-mobile-balloon.png) no-repeat;
+        left: 0;
+        top: 0;
+        height: 233px;
+        width: 280px;
+        .youku-logo {
+          width: 95%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      &.weibo-balloon {
+        background: url(../images/weibo-mobile-balloon.png) no-repeat;
+        left: 0;
+        top: 0;
+        height: 233px;
+        width: 280px;
+        .weibo-logo {
+          margin:22px auto 0;
+          width: 95%;
+        }
+      }
+      &.qq-balloon {
+        background: url(../images/qq-mobile-balloon.png) no-repeat;
+        left: 0;
+        top: 0;
+        height: 233px;
+        width: 280px;
+        .qq-logo {
+          margin:42px auto 0;
+          width: 95%;
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile-p) {
+    background: none;
+    float: none;
+    width: 280px;
+    height: 690px;
+    display: block;
+    margin: 0 auto;
+    .balloons-bg {
+      display:none;
+    }
+    .balloon {
+      position: relative;
+      height: 233px;
+      width: 280px;
+      &.youku-balloon {
+        background: url(../images/youku-mobile-balloon.png) no-repeat;
+        left: 0;
+        top: 0;
+        height: 233px;
+        width: 280px;
+        .youku-logo {
+          width: 95%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      &.weibo-balloon {
+        background: url(../images/weibo-mobile-balloon.png) no-repeat;
+        left: 0;
+        top: 0;
+        height: 233px;
+        width: 280px;
+        .weibo-logo {
+          margin:22px auto 0;
+          width: 95%;
+        }
+      }
+      &.qq-balloon {
+        background: url(../images/qq-mobile-balloon.png) no-repeat;
+        left: 0;
+        top: 0;
+        height: 233px;
+        width: 280px;
+        .qq-logo {
+          margin:42px auto 0;
+          width: 95%;
+        }
+      }
+    }
+  }
+}
+
+
+/* old mosaic styles */
+/*.column-container {
+  width: 1080px;
+  @include breakpoint(desktop-960) {
+    width: 960px;
+  }
+  @include breakpoint(tablet) {
+    width: 720px;
+  }
+  @include breakpoint(mobile-l) {
+    width: $breakpoint-mobile-landscape - 80;
+  }
+  @include breakpoint(mobile-p) {
+    width: $breakpoint-mobile-portrait;
+  }
+  .social-column {
+    //background-color: #fff;
+    float: left;
+    margin-right: 30px;
+    width: 334px;
+    @include breakpoint(desktop-960) {
+      width: 294px;
+    }
+    @include breakpoint(tablet) {
+      width: 220px;
+      margin-right: 20px;
+    }
+    @include breakpoint(mobile-l) {
+      float: none;
+      width: 400px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    @include breakpoint(mobile-p) {
+      float: none;
+      width: 300px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    .weibo-container {
+      p {
+        margin-top: 10px;
+        padding: 0 5px;
+      }
+    }
+    .youku-container {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}*/

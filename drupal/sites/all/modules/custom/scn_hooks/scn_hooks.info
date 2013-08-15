@@ -1,0 +1,4 @@
+name = Front Zones
+description = Custom blocks for homepage zones.
+core = 7.x
+package = Digitaria

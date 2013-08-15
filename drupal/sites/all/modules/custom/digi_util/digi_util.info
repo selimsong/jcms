@@ -1,0 +1,4 @@
+name = Digitaria Utility
+description = Contains utility functions and helpers.
+package = Digitaria
+core = 7.x

@@ -1,0 +1,31 @@
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+
+$cyan : #00beb6;
+$red : #ee3124;
+$yellow : #fed94f;
+
+$breakpoint-mobile-portrait : 320px !default;
+$breakpoint-mobile-landscape  : 480px !default;
+$breakpoint-tablet : 720px !default;
+$breakpoint-desktop-960 : 960px !default;
+$breakpoint-desktop-1200 : 1280px !default;
+
+@mixin breakpoint($media) {
+  @if $media == desktop-1200  {
+    @media only screen and (min-width: $breakpoint-desktop-1200) and (max-width: 3000px) { @content; }
+  }
+  @if $media == desktop-960  {
+    @media only screen and (min-width: $breakpoint-desktop-960) and (max-width: $breakpoint-desktop-1200 - 1) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop-960 - 1) { @content; }
+  }
+  @else if $media == mobile-l {
+    @media only screen and (min-width: $breakpoint-mobile-landscape) and (max-width: $breakpoint-tablet - 1) { @content; }
+  }
+  @else if $media == mobile-p {
+    @media only screen and (max-width: $breakpoint-mobile-landscape - 1) { @content; }
+  }
+}

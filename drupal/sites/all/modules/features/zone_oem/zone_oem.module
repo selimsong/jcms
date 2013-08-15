@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the zone_oem feature.
+ */
+
+include_once 'zone_oem.features.inc';
