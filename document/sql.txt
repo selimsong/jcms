@@ -1,4 +1,4 @@
---
+﻿--
 -- 表的结构 `category`
 --
 
@@ -79,3 +79,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `roleid` bigint(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+
+管理后台
+http://weiboapp.wood-spring.com/index.php?/admin/login
+帐号:lux
+密码:lux2013
+数据库：
+http://21tg.cn/phpmyadmin
+weiboapp_f
+weiboapp2013
+你看到的话尽快看下，看看能不能接着这个代码做，微博相关的我会处理或者指导你
